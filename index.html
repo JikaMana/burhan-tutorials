@@ -1,33 +1,34 @@
 <!doctype html>
-<html
-  lang="en"
-  class="dark scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
+
+    <title>Burhan Tutors | Live Online Maths &amp; Physics Classes</title>
     <meta
       name="description"
-      content="Burhan Tutorials offers premium online Mathematics and Physics tutoring in Nigeria and beyond, helping WAEC, NECO, JAMB/UTME, Post-UTME, and 100-level students master difficult concepts through live, concept-first lessons." />
+      content="Burhan Tutors runs live online Mathematics and Physics classes for secondary school and university foundation students. Small groups, concept-first teaching, weekly past questions. Classes begin August 10th." />
     <meta
       name="keywords"
-      content="online math tutor, online physics tutor, mathematics tutoring, physics tutoring, WAEC mathematics, WAEC physics, JAMB mathematics, JAMB physics, Post-UTME coaching, 100-level maths and physics, Nigeria tutoring, online education, STEM tutor" />
+      content="online maths tutor, online physics tutor, WAEC mathematics, WAEC physics, NECO, JAMB UTME maths, Post-UTME physics, 100 level maths, university foundation physics, live online tutoring Nigeria, Burhan Tutors" />
     <meta
       name="author"
-      content="Burhan Tutorials" />
+      content="Burhan Tutors" />
     <meta
       name="robots"
-      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      content="index, follow, max-snippet:-1, max-image-preview:large" />
     <meta
       name="theme-color"
       content="#081423" />
     <meta
       name="format-detection"
       content="telephone=yes" />
+
     <link
       rel="canonical"
-      href="https://burhan-tutorials.netlify.app/" />
+      href="https://burhantutors.netlify.app/" />
     <link
       rel="sitemap"
       type="application/xml"
@@ -36,55 +37,55 @@
     <link
       rel="icon"
       type="image/png"
-      href="/images/burhan.png" />
+      href="/images/burhan-dark.png" />
     <link
       rel="apple-touch-icon"
-      href="/images/burhan.png" />
+      href="/images/burhan-dark.png" />
+
     <meta
       property="og:site_name"
-      content="Burhan Tutorials" />
+      content="Burhan Tutors" />
     <meta
       property="og:type"
       content="website" />
     <meta
       property="og:url"
-      content="https://burhan-tutorials.netlify.app/" />
+      content="https://burhantutors.netlify.app/" />
     <meta
       property="og:title"
-      content="Burhan Tutorials | Online Mathematics & Physics Academy" />
+      content="Burhan Tutors | Think Sharper, Score Higher" />
     <meta
       property="og:description"
-      content="Premium online Mathematics and Physics tutoring for Nigerian students, built around first-principles learning and live interactive sessions." />
+      content="Live online Maths and Physics classes built for real understanding and exam excellence. Secondary school and university foundation. Classes begin August 10th." />
     <meta
       property="og:image"
-      content="https://burhan-tutorials.netlify.app/images/TUTORIALS.png" />
+      content="https://burhantutors.netlify.app/images/burhan-dark.png" />
     <meta
       property="og:image:alt"
-      content="Burhan Tutorials mathematics and physics academy visual" />
+      content="Burhan Tutors logo" />
     <meta
       property="og:image:width"
-      content="1200" />
+      content="2000" />
     <meta
       property="og:image:height"
-      content="630" />
+      content="2000" />
     <meta
       property="og:locale"
       content="en_NG" />
+
     <meta
       name="twitter:card"
       content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Burhan Tutorials | Online Mathematics & Physics Academy" />
+      content="Burhan Tutors | Think Sharper, Score Higher" />
     <meta
       name="twitter:description"
-      content="Premium online Mathematics and Physics tutoring for Nigerian students with live concept-first lessons." />
+      content="Live online Maths and Physics classes for secondary school and university foundation students. Classes begin August 10th." />
     <meta
       name="twitter:image"
-      content="https://burhan-tutorials.netlify.app/images/TUTORIALS.png" />
-    <title>Burhan Tutorials | Online Mathematics & Physics Academy</title>
+      content="https://burhantutors.netlify.app/images/burhan-dark.png" />
 
-    <!-- Google Fonts: Inter & JetBrains Mono -->
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com" />
@@ -93,29 +94,24 @@
       href="https://fonts.gstatic.com"
       crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet" />
 
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
-        darkMode: "class",
         theme: {
           extend: {
             colors: {
-              blueprint: "#081423",
-              panel: "#0C1C2E",
-              terracotta: {
-                DEFAULT: "#C15F3C",
-                hover: "#A84E2E",
-                dim: "rgba(193, 95, 60, 0.15)",
-              },
-              warmgrey: "#F7F6F3",
-              borderline: "rgba(255, 255, 255, 0.08)",
-              gridline: "rgba(255, 255, 255, 0.04)",
+              ink: "#081423",
+              ink2: "#0C1C2E",
+              ink3: "#12283F",
+              clay: { DEFAULT: "#C15F3C", hi: "#D97D5A", lo: "#A44C2C" },
+              cream: "#F7F6F3",
+              sand: "#EFEBE4",
             },
             fontFamily: {
+              display: ["Sora", "sans-serif"],
               sans: ["Inter", "sans-serif"],
               mono: ["JetBrains Mono", "monospace"],
             },
@@ -124,13 +120,8 @@
       };
     </script>
 
-    <!-- Lenis Smooth Scroll CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/lenis@1.1.18/dist/lenis.css" />
-
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Icon library: pinned so the icon set never shifts under the page -->
+    <script src="https://unpkg.com/lucide@1.28.0/dist/umd/lucide.min.js"></script>
 
     <script type="application/ld+json">
       {
@@ -138,49 +129,71 @@
         "@graph": [
           {
             "@type": "EducationalOrganization",
-            "@id": "https://burhan-tutorials.netlify.app/#organization",
-            "name": "Burhan Tutorials",
-            "url": "https://burhan-tutorials.netlify.app/",
-            "logo": "https://burhan-tutorials.netlify.app/images/burhan.png",
-            "description": "Premium online Mathematics and Physics tutoring for WAEC, NECO, JAMB/UTME, Post-UTME, and 100-level students in Nigeria.",
+            "@id": "https://burhantutors.netlify.app/#organization",
+            "name": "Burhan Tutors",
+            "alternateName": "Burhan Tutors Online Maths and Physics Academy",
+            "slogan": "Think Sharper, Score Higher",
+            "url": "https://burhantutors.netlify.app/",
+            "logo": "https://burhantutors.netlify.app/images/burhan-dark.png",
+            "image": "https://burhantutors.netlify.app/images/burhan-dark.png",
+            "description": "Live online Mathematics and Physics classes for secondary school and university foundation students.",
             "telephone": "+2349039147388",
             "areaServed": "NG",
             "sameAs": ["https://wa.me/2349039147388"],
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "NG"
+            "address": { "@type": "PostalAddress", "addressCountry": "NG" },
+            "knowsAbout": ["Mathematics", "Physics"]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://burhantutors.netlify.app/#website",
+            "name": "Burhan Tutors",
+            "url": "https://burhantutors.netlify.app/",
+            "publisher": {
+              "@id": "https://burhantutors.netlify.app/#organization"
+            }
+          },
+          {
+            "@type": "Course",
+            "name": "Live Mathematics Classes",
+            "description": "Algebra, trigonometry, coordinate geometry, calculus, statistics and probability, taught live for SSCE, WAEC, NECO, JAMB/UTME, Post-UTME and 100 level.",
+            "provider": {
+              "@id": "https://burhantutors.netlify.app/#organization"
             },
-            "curriculum": ["Mathematics", "Physics"],
+            "educationalLevel": "Secondary and university foundation",
+            "hasCourseInstance": {
+              "@type": "CourseInstance",
+              "courseMode": "Online",
+              "startDate": "2026-08-10",
+              "courseWorkload": "PT1H"
+            },
             "offers": {
               "@type": "Offer",
               "price": "2000",
               "priceCurrency": "NGN",
-              "availability": "https://schema.org/InStock"
+              "availability": "https://schema.org/InStock",
+              "url": "https://burhantutors.netlify.app/#pricing"
             }
           },
           {
-            "@type": "WebSite",
-            "@id": "https://burhan-tutorials.netlify.app/#website",
-            "name": "Burhan Tutorials",
-            "url": "https://burhan-tutorials.netlify.app/"
-          },
-          {
-            "@type": "Service",
-            "serviceType": "Online Mathematics and Physics Tutoring",
+            "@type": "Course",
+            "name": "Live Physics Classes",
+            "description": "Mechanics, waves, optics, heat, electricity and magnetism, fields and modern physics, taught live for SSCE, WAEC, NECO, JAMB/UTME, Post-UTME and 100 level.",
             "provider": {
-              "@id": "https://burhan-tutorials.netlify.app/#organization"
+              "@id": "https://burhantutors.netlify.app/#organization"
             },
-            "areaServed": {
-              "@type": "Country",
-              "name": "Nigeria"
+            "educationalLevel": "Secondary and university foundation",
+            "hasCourseInstance": {
+              "@type": "CourseInstance",
+              "courseMode": "Online",
+              "startDate": "2026-08-10",
+              "courseWorkload": "PT1H"
             },
-            "audience": {
-              "@type": "Audience",
-              "audienceType": "Secondary and tertiary STEM students"
-            },
-            "availableChannel": {
-              "@type": "ServiceChannel",
-              "serviceUrl": "https://wa.me/2349039147388"
+            "offers": {
+              "@type": "Offer",
+              "price": "2000",
+              "priceCurrency": "NGN",
+              "availability": "https://schema.org/InStock",
+              "url": "https://burhantutors.netlify.app/#pricing"
             }
           },
           {
@@ -188,26 +201,50 @@
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "What subjects does Burhan Tutorials teach?",
+                "name": "Which exams do you prepare students for?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Burhan Tutorials teaches Mathematics and Physics for WAEC, NECO, JAMB/UTME, Post-UTME, and 100-level university foundation studies."
+                  "text": "SSCE, WAEC, GCE, NECO, JAMB/UTME and Post-UTME, plus 100 level university Mathematics and Physics."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Is the tutoring live and interactive?",
+                "name": "Are the classes live or pre-recorded?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Lessons are delivered live on a digital whiteboard with direct tutor support and a small class size for focused learning."
+                  "text": "Every class is live on a shared digital whiteboard. You can stop the tutor mid-solution and ask a question. Recordings are shared afterwards so you can revise."
                 }
               },
               {
                 "@type": "Question",
-                "name": "How much does a lesson cost?",
+                "name": "How many students are in a class?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "The standard tutoring rate is ₦2,000 per hour, with flexible weekly or monthly payment arrangements available."
+                  "text": "Three students maximum per group class, so every student gets called on and gets their work checked. One-on-one slots are available on request."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does it cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "2,000 naira per hour, covering both Mathematics and Physics. Pay weekly or monthly, whichever suits you."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When do classes start?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The first cohort begins on August 10th. Seats are reserved on WhatsApp at 0903 914 7388."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What do I need to join a class?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A phone or laptop, a stable data connection, and a notebook. Nothing else to buy or install beyond the free meeting app."
                 }
               }
             ]
@@ -216,1187 +253,2539 @@
       }
     </script>
 
-    <!-- Custom Architectural Grid & Glass Styles -->
     <style>
+      :root {
+        --ink: #081423;
+        --ink-2: #0c1c2e;
+        --ink-3: #12283f;
+        --clay: #c15f3c;
+        --clay-hi: #d97d5a;
+        --cream: #f7f6f3;
+        --sand: #efebe4;
+        --line-dark: rgba(247, 246, 243, 0.11);
+        --line-light: rgba(8, 20, 35, 0.13);
+      }
+
+      * {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      /* Native scrolling. No scroll hijacking, no inertia library.
+         Behaves identically on trackpad, mouse wheel, touch and keyboard. */
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 96px;
+      }
+
       body {
-        background-color: #081423;
-        color: #f7f6f3;
+        background: var(--ink);
+        color: var(--cream);
         font-family: "Inter", sans-serif;
         overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
       }
 
-      /* 1px Technical Blueprint Grid */
-      .bg-grid-pattern {
-        background-size: 40px 40px;
-        background-image:
-          linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0.04) 1px,
-            transparent 1px
-          ),
-          linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0.04) 1px,
-            transparent 1px
-          );
+      ::selection {
+        background: var(--clay);
+        color: #fff;
       }
 
-      .bg-grid-dense {
-        background-size: 16px 16px;
-        background-image:
-          linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0.02) 1px,
-            transparent 1px
-          ),
-          linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0.02) 1px,
-            transparent 1px
-          );
-      }
-
-      /* Glassmorphism Panel */
-      .glass-panel {
-        background: rgba(12, 28, 46, 0.65);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-      }
-
-      .glass-nav {
-        background: rgba(8, 20, 35, 0.85);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      }
-
-      /* Corner Architectural Crosshairs */
-      .crosshair-container {
-        position: relative;
-      }
-
-      .crosshair-container::before,
-      .crosshair-container::after {
-        content: "+";
-        position: absolute;
-        font-family: "JetBrains Mono", monospace;
-        font-size: 12px;
-        color: rgba(255, 255, 255, 0.25);
-        line-height: 1;
-        z-index: 20;
-        pointer-events: none;
-      }
-
-      .cross-tl::before {
-        top: -6px;
-        left: -5px;
-      }
-      .cross-tr::after {
-        top: -6px;
-        right: -5px;
-      }
-      .cross-bl::before {
-        bottom: -6px;
-        left: -5px;
-      }
-      .cross-br::after {
-        bottom: -6px;
-        right: -5px;
-      }
-
-      /* Custom Scrollbar */
       ::-webkit-scrollbar {
-        width: 6px;
+        width: 10px;
       }
       ::-webkit-scrollbar-track {
-        background: #081423;
+        background: var(--ink);
       }
       ::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(247, 246, 243, 0.2);
+        border-radius: 10px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #c15f3c;
+        background: var(--clay);
       }
 
-      /* Ticker Marquee */
-      @keyframes marquee {
-        0% {
-          transform: translateX(0%);
+      :focus-visible {
+        outline: 2px solid var(--clay);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+
+      .font-display {
+        font-family: "Sora", sans-serif;
+      }
+
+      /* ---------- Section themes: flat, no gradients ---------- */
+      .theme-cream {
+        background: var(--cream);
+        color: var(--ink);
+      }
+      .theme-sand {
+        background: var(--sand);
+        color: var(--ink);
+      }
+      .theme-ink {
+        background: var(--ink);
+        color: var(--cream);
+      }
+      .theme-ink2 {
+        background: var(--ink-2);
+        color: var(--cream);
+      }
+
+      /* ---------- Nav ---------- */
+      .nav-shell {
+        background: rgba(8, 20, 35, 0.86);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid transparent;
+        transition:
+          background 0.3s ease,
+          border-color 0.3s ease;
+      }
+      .nav-shell.is-stuck {
+        background: rgba(8, 20, 35, 0.97);
+        border-bottom-color: var(--line-dark);
+      }
+      .nav-link {
+        position: relative;
+        padding-bottom: 3px;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1.5px;
+        width: 0;
+        background: var(--clay);
+        transition: width 0.28s ease;
+      }
+      .nav-link:hover::after,
+      .nav-link.is-active::after {
+        width: 100%;
+      }
+      .nav-link.is-active {
+        color: #fff;
+      }
+
+      #progressbar {
+        transform-origin: 0 50%;
+        transform: scaleX(0);
+      }
+
+      /* ---------- Buttons ---------- */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        font-family: "Sora", sans-serif;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        border-radius: 10px;
+        transition:
+          background 0.22s ease,
+          color 0.22s ease,
+          border-color 0.22s ease,
+          transform 0.18s ease;
+      }
+      .btn:active {
+        transform: translateY(1px);
+      }
+      .btn-clay {
+        background: var(--clay);
+        color: #fff;
+      }
+      .btn-clay:hover {
+        background: var(--clay-hi);
+      }
+      .btn-ghost-dark {
+        border: 1px solid rgba(247, 246, 243, 0.24);
+        color: var(--cream);
+      }
+      .btn-ghost-dark:hover {
+        border-color: var(--clay);
+        color: var(--clay-hi);
+      }
+      .btn-ink {
+        background: var(--ink);
+        color: var(--cream);
+      }
+      .btn-ink:hover {
+        background: var(--ink-3);
+      }
+
+      /* ---------- Cards: flat fills, 1px borders ---------- */
+      .card-dark {
+        background: var(--ink-2);
+        border: 1px solid var(--line-dark);
+        border-radius: 14px;
+        transition:
+          border-color 0.28s ease,
+          background 0.28s ease;
+      }
+      .card-dark:hover {
+        border-color: rgba(193, 95, 60, 0.6);
+        background: var(--ink-3);
+      }
+      .card-light {
+        background: #fff;
+        border: 1px solid var(--line-light);
+        border-radius: 14px;
+        transition:
+          border-color 0.28s ease,
+          box-shadow 0.28s ease;
+      }
+      .card-light:hover {
+        border-color: rgba(193, 95, 60, 0.65);
+        box-shadow: 0 2px 0 0 rgba(193, 95, 60, 0.16);
+      }
+
+      .eyebrow {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .rule-clay {
+        width: 44px;
+        height: 3px;
+        background: var(--clay);
+        border-radius: 2px;
+      }
+
+      /* ---------- Hero headline reveal ---------- */
+      .line-mask {
+        display: block;
+        overflow: hidden;
+        padding-bottom: 0.08em;
+      }
+      .line-inner {
+        display: block;
+        transform: translateY(108%);
+        transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .hero-in .line-inner {
+        transform: translateY(0);
+      }
+      .hero-in .line-mask:nth-child(2) .line-inner {
+        transition-delay: 0.1s;
+      }
+
+      /* ---------- Marquee ---------- */
+      .marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee-run 38s linear infinite;
+      }
+      .marquee:hover {
+        animation-play-state: paused;
+      }
+      @keyframes marquee-run {
+        from {
+          transform: translateX(0);
         }
-        100% {
+        to {
           transform: translateX(-50%);
         }
       }
-      .animate-marquee {
-        display: flex;
-        width: 200%;
-        animation: marquee 25s linear infinite;
+
+      /* ---------- Whiteboard hero visual: flat ---------- */
+      .board {
+        background: var(--ink-2);
+        border: 1px solid var(--line-dark);
+        border-radius: 16px;
       }
-      .animate-marquee:hover {
-        animation-play-state: paused;
+      .board-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 9999px;
+        background: rgba(247, 246, 243, 0.18);
+      }
+      .status-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 9999px;
+        background: #3fbf8f;
+      }
+
+      .chip-formula {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        padding: 7px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--line-dark);
+        background: var(--ink);
+        color: rgba(247, 246, 243, 0.8);
+        white-space: nowrap;
+      }
+
+      #curve {
+        transition: stroke-dashoffset 1.6s ease-in-out;
+      }
+      .graph-extra {
+        opacity: 0;
+        transition: opacity 0.5s ease 1.3s;
+      }
+      .graph-in .graph-extra {
+        opacity: 1;
+      }
+
+      .caret::after {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 1.05em;
+        margin-left: 3px;
+        background: var(--clay);
+        vertical-align: -0.16em;
+        animation: blink 1.05s steps(1) infinite;
+      }
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .spine {
+        border-radius: 3px 6px 6px 3px;
+        font-family: "Sora", sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        padding-left: 14px;
+        color: rgba(247, 246, 243, 0.92);
+        border: 1px solid var(--line-dark);
+        border-left: 5px solid rgba(247, 246, 243, 0.22);
+        transition: transform 0.28s ease;
+      }
+      .spine:hover {
+        transform: translateX(6px);
+      }
+
+      /* ---------- Method rail ---------- */
+      .rail {
+        position: absolute;
+        left: 27px;
+        top: 12px;
+        bottom: 12px;
+        width: 2px;
+        background: rgba(8, 20, 35, 0.12);
+      }
+      .rail-fill {
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 2px;
+        background: var(--clay);
+        transform-origin: 50% 0;
+        transform: scaleY(0);
+      }
+      @media (min-width: 768px) {
+        .rail {
+          left: 0;
+          right: 0;
+          top: 27px;
+          bottom: auto;
+          width: auto;
+          height: 2px;
+        }
+        .rail-fill {
+          inset: 0 0 auto 0;
+          width: 100%;
+          height: 2px;
+          transform-origin: 0 50%;
+          transform: scaleX(0);
+        }
+      }
+
+      .step-num {
+        font-family: "Sora", sans-serif;
+        font-weight: 700;
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        background: #fff;
+        border: 2px solid rgba(8, 20, 35, 0.14);
+        color: var(--ink);
+        transition:
+          background 0.28s ease,
+          color 0.28s ease,
+          border-color 0.28s ease;
+      }
+      .step:hover .step-num {
+        background: var(--clay);
+        border-color: var(--clay);
+        color: #fff;
+      }
+
+      /* ---------- Countdown ---------- */
+      .cd-cell {
+        background: var(--ink-2);
+        border: 1px solid var(--line-dark);
+        border-radius: 12px;
+        padding: 18px 10px;
+        text-align: center;
+        transition: border-color 0.28s ease;
+      }
+      .cd-cell:hover {
+        border-color: rgba(193, 95, 60, 0.55);
+      }
+      .cd-num {
+        font-family: "Sora", sans-serif;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* ---------- FAQ ---------- */
+      details.faq {
+        border-bottom: 1px solid var(--line-light);
+      }
+      details.faq summary {
+        list-style: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 22px 0;
+        font-family: "Sora", sans-serif;
+        font-weight: 600;
+        transition: color 0.22s ease;
+      }
+      details.faq summary::-webkit-details-marker {
+        display: none;
+      }
+      details.faq summary:hover {
+        color: var(--clay);
+      }
+      details.faq .chev {
+        flex: none;
+        transition: transform 0.3s ease;
+      }
+      details.faq[open] .chev {
+        transform: rotate(180deg);
+        color: var(--clay);
+      }
+      details.faq .faq-body {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.34s ease;
+      }
+      details.faq[open] .faq-body {
+        grid-template-rows: 1fr;
+      }
+      details.faq .faq-body > div {
+        overflow: hidden;
+      }
+
+      /* ---------- Reveal ---------- */
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      .revealed {
+        opacity: 1;
+        transform: none;
+        transition:
+          opacity 0.65s ease,
+          transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      /* ---------- Floating WhatsApp ---------- */
+      #wa-float {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 60;
+        opacity: 0;
+        transform: translateY(14px);
+        pointer-events: none;
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease;
+      }
+      #wa-float.on {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+        .line-inner {
+          transform: none;
+        }
       }
     </style>
   </head>
-  <body
-    class="bg-blueprint text-warmgrey selection:bg-terracotta selection:text-white">
+
+  <body>
     <a
-      href="#main-content"
-      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-terracotta focus:text-white focus:rounded">
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-clay focus:text-white focus:rounded-lg">
       Skip to content
     </a>
 
-    <!-- TOP NAVIGATION BAR -->
-    <header class="fixed top-0 left-0 w-full z-50 glass-nav">
+    <!-- ================= SCROLL PROGRESS ================= -->
+    <div class="fixed top-0 left-0 right-0 z-[70] h-[3px]">
       <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        <!-- Brand & Logo -->
-        <a
-          href="#"
-          class="flex items-center gap-3 group">
-          <div
-            class="relative w-20 border border-white/15 bg-panel p-1 flex items-center justify-center overflow-hidden transition-colors group-hover:border-terracotta">
-            <img
-              src="/images/burhan.png"
-              alt="Burhan Tutorials logo"
-              class="w-full h-full object-contain"
-              loading="eager"
-              decoding="async"
-              onerror="
-                this.onerror = null;
-                this.src = 'https://placehold.co/100x100/0C1C2E/C15F3C?text=BT';
-              " />
-          </div>
-          <div class="flex flex-col">
-            <span
-              class="font-bold text-base tracking-tight text-white font-sans uppercase"
-              >BURHAN
-              <span class="text-terracotta font-mono font-normal"
-                >TUTORIALS</span
-              ></span
-            >
-            <span
-              class="text-[10px] font-mono text-white/50 tracking-widest uppercase"
-              >MATH & PHYSICS ACADEMY</span
-            >
-          </div>
-        </a>
+        id="progressbar"
+        class="h-full w-full bg-clay"></div>
+    </div>
 
-        <!-- Technical Navigation Links -->
+    <!-- ================= HEADER ================= -->
+    <header
+      id="nav"
+      class="nav-shell fixed top-0 left-0 w-full z-[65]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="h-[76px] flex items-center justify-between gap-6">
+          <a
+            href="#top"
+            class="flex items-center gap-3 group shrink-0"
+            aria-label="Burhan Tutors home">
+            <span
+              class="w-11 h-11 rounded-lg overflow-hidden bg-ink border border-white/12 grid place-items-center transition-colors group-hover:border-clay">
+              <img
+                src="/images/burhan-dark.png"
+                alt="Burhan Tutors logo"
+                class="w-[190%] max-w-none"
+                width="44"
+                height="44"
+                loading="eager"
+                decoding="async" />
+            </span>
+            <span class="flex flex-col leading-none">
+              <span
+                class="font-display text-[15px] font-semibold tracking-tight text-white">
+                BURHAN <span class="text-clay">TUTORS</span>
+              </span>
+              <span class="eyebrow text-white/45 mt-1 text-[9px]"
+                >Maths &amp; Physics</span
+              >
+            </span>
+          </a>
+
+          <nav
+            aria-label="Primary"
+            class="hidden lg:flex items-center gap-8 text-[13px] text-white/65 font-medium">
+            <a
+              href="#subjects"
+              class="nav-link hover:text-white transition-colors"
+              >Subjects</a
+            >
+            <a
+              href="#students"
+              class="nav-link hover:text-white transition-colors"
+              >Who it's for</a
+            >
+            <a
+              href="#difference"
+              class="nav-link hover:text-white transition-colors"
+              >Why us</a
+            >
+            <a
+              href="#method"
+              class="nav-link hover:text-white transition-colors"
+              >How it works</a
+            >
+            <a
+              href="#pricing"
+              class="nav-link hover:text-white transition-colors"
+              >Pricing</a
+            >
+            <a
+              href="#faq"
+              class="nav-link hover:text-white transition-colors"
+              >FAQ</a
+            >
+          </nav>
+
+          <div class="flex items-center gap-2">
+            <a
+              href="https://wa.me/2349039147388?text=Hello%20Burhan%20Tutors%2C%20I%20want%20to%20reserve%20a%20seat%20for%20the%20August%2010th%20classes."
+              target="_blank"
+              rel="noopener"
+              class="btn btn-clay hidden sm:inline-flex px-5 py-2.5 text-[13px]">
+              <i
+                data-lucide="message-circle"
+                class="w-4 h-4"></i>
+              Reserve a seat
+            </a>
+
+            <button
+              id="menu-btn"
+              class="lg:hidden w-11 h-11 grid place-items-center rounded-lg border border-white/15 text-white/80 hover:text-white hover:border-white/35 transition-colors"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu">
+              <span
+                id="menu-icon-wrap"
+                class="grid place-items-center">
+                <i
+                  data-lucide="menu"
+                  class="w-5 h-5"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="lg:hidden overflow-hidden max-h-0 transition-[max-height] duration-400 ease-out">
         <nav
-          aria-label="Primary navigation"
-          class="hidden md:flex items-center gap-8 font-mono text-xs text-white/70">
+          class="px-4 sm:px-6 py-5 flex flex-col gap-1 bg-ink border-t border-white/10"
+          aria-label="Mobile">
           <a
-            href="#who-we-teach"
-            class="hover:text-terracotta transition-colors flex items-center gap-1.5">
-            AUDIENCE
-          </a>
+            href="#subjects"
+            class="mob-link py-3 px-3 rounded-lg text-white/75 hover:text-white hover:bg-white/5 transition-colors"
+            >Subjects</a
+          >
           <a
-            href="#methodology"
-            class="hover:text-terracotta transition-colors flex items-center gap-1.5">
-            METHODOLOGY
-          </a>
+            href="#students"
+            class="mob-link py-3 px-3 rounded-lg text-white/75 hover:text-white hover:bg-white/5 transition-colors"
+            >Who it's for</a
+          >
           <a
-            href="#simulation"
-            class="hover:text-terracotta transition-colors flex items-center gap-1.5">
-            LAB CANVAS
-          </a>
+            href="#difference"
+            class="mob-link py-3 px-3 rounded-lg text-white/75 hover:text-white hover:bg-white/5 transition-colors"
+            >Why us</a
+          >
+          <a
+            href="#method"
+            class="mob-link py-3 px-3 rounded-lg text-white/75 hover:text-white hover:bg-white/5 transition-colors"
+            >How it works</a
+          >
+          <a
+            href="#launch"
+            class="mob-link py-3 px-3 rounded-lg text-white/75 hover:text-white hover:bg-white/5 transition-colors"
+            >Launch date</a
+          >
           <a
             href="#pricing"
-            class="hover:text-terracotta transition-colors flex items-center gap-1.5">
-            PRICING
+            class="mob-link py-3 px-3 rounded-lg text-white/75 hover:text-white hover:bg-white/5 transition-colors"
+            >Pricing</a
+          >
+          <a
+            href="#faq"
+            class="mob-link py-3 px-3 rounded-lg text-white/75 hover:text-white hover:bg-white/5 transition-colors"
+            >FAQ</a
+          >
+          <a
+            href="https://wa.me/2349039147388?text=Hello%20Burhan%20Tutors%2C%20I%20want%20to%20reserve%20a%20seat%20for%20the%20August%2010th%20classes."
+            target="_blank"
+            rel="noopener"
+            class="btn btn-clay mt-3 py-3.5 text-sm">
+            <i
+              data-lucide="message-circle"
+              class="w-4 h-4"></i>
+            Reserve a seat on WhatsApp
           </a>
         </nav>
-
-        <!-- Action Button -->
-        <div class="flex items-center gap-4">
-          <a
-            href="https://wa.me/2349039147388?text=Hello%20Burhan%20Tutorials,%20I%20am%20interested%20in%20joining%20the%20tutorial."
-            target="_blank"
-            class="inline-flex items-center gap-2 bg-terracotta hover:bg-terracotta-hover text-white px-4 py-2.5 text-xs font-mono tracking-wider uppercase border border-terracotta transition-all shadow-lg shadow-terracotta/10">
-            <i
-              data-lucide="message-square"
-              class="w-4 h-4"></i>
-            <span>ENROLL NOW</span>
-          </a>
-        </div>
       </div>
     </header>
 
-    <!-- TECHNICAL METADATA TICKER -->
-    <div
-      class="mt-20 border-b border-borderline bg-panel/40 overflow-hidden font-mono text-[11px] py-2.5 text-white/60">
-      <div class="animate-marquee whitespace-nowrap flex gap-12 items-center">
-        <span class="flex items-center gap-2"
-          ><span
-            class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-          COHORT LAUNCH: AUGUST 1ST, 2026</span
-        >
-        <span class="text-white/20">|</span>
-        <span class="flex items-center gap-2"
-          ><i
-            data-lucide="shield-check"
-            class="w-3.5 h-3.5 text-terracotta"></i>
-          OPERATIONAL STANDARD: max 3 STUDENTS / CLASS</span
-        >
-        <span class="text-white/20">|</span>
-        <span class="flex items-center gap-2"
-          ><i
-            data-lucide="calculator"
-            class="w-3.5 h-3.5 text-terracotta"></i>
-          TUITION: ₦2,000 / HOUR</span
-        >
-        <span class="text-white/20">|</span>
-        <span class="flex items-center gap-2"
-          ><i
-            data-lucide="cpu"
-            class="w-3.5 h-3.5 text-terracotta"></i>
-          CONCEPT-FIRST DERIVATION METHOD</span
-        >
-        <span class="text-white/20">|</span>
-        <span class="flex items-center gap-2"
-          ><i
-            data-lucide="user-check"
-            class="w-3.5 h-3.5 text-terracotta"></i>
-          PRIVATE 1-ON-1 SESSIONS AVAILABLE</span
-        >
-        <span class="text-white/20">|</span>
-        <!-- Duplicate for infinite loop -->
-        <span class="flex items-center gap-2"
-          ><span
-            class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-          COHORT LAUNCH: AUGUST 1ST, 2026</span
-        >
-        <span class="text-white/20">|</span>
-        <span class="flex items-center gap-2"
-          ><i
-            data-lucide="shield-check"
-            class="w-3.5 h-3.5 text-terracotta"></i>
-          OPERATIONAL STANDARD: max 3 STUDENTS / CLASS</span
-        >
-        <span class="text-white/20">|</span>
-        <span class="flex items-center gap-2"
-          ><i
-            data-lucide="calculator"
-            class="w-3.5 h-3.5 text-terracotta"></i>
-          TUITION: ₦2,000 / HOUR</span
-        >
-        <span class="text-white/20">|</span>
-        <span class="flex items-center gap-2"
-          ><i
-            data-lucide="cpu"
-            class="w-3.5 h-3.5 text-terracotta"></i>
-          CONCEPT-FIRST DERIVATION METHOD</span
-        >
-        <span class="text-white/20">|</span>
-        <span class="flex items-center gap-2"
-          ><i
-            data-lucide="user-check"
-            class="w-3.5 h-3.5 text-terracotta"></i>
-          PRIVATE 1-ON-1 SESSIONS AVAILABLE</span
-        >
-      </div>
-    </div>
+    <main id="main">
+      <span id="top"></span>
 
-    <!-- MAIN CONTAINER WITH TECHNICAL GRID BACKGROUND -->
-    <main
-      id="main-content"
-      class="bg-grid-pattern relative">
-      <!-- HERO SECTION: EDITORIAL HIGH-DENSITY HEADER + FRAMED HUD -->
-      <section
-        class="relative pt-12 pb-20 md:pt-20 md:pb-32 border-b border-borderline">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <!-- Massive Editorial Typography Header -->
-          <div class="relative mb-12">
-            <h1
-              class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight text-white uppercase leading-none font-sans gsap-reveal">
-              SOLVE.<br />
-              <span
-                class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-terracotta"
-                >UNDERSTAND.</span
-              ><br />
-              <span class="text-terracotta">ACHIEVE.</span>
-            </h1>
-            <p
-              class="mt-6 max-w-2xl text-base sm:text-lg text-white/70 font-sans leading-relaxed gsap-reveal">
-              A rigorous online Mathematics & Physics academy for students in
-              Nigeria and beyond who want real understanding, not rote
-              memorization. We deliver live online math and physics tutoring for
-              WAEC, NECO, JAMB/UTME, Post-UTME, and 100-level learners through
-              concept-first lessons and focused micro-cohorts.
-            </p>
-          </div>
-
-          <!-- Framed HUD Container for Visual Asset -->
+      <!-- ================= HERO ================= -->
+      <section class="theme-ink pt-[76px]">
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-16 md:pt-20 md:pb-24">
           <div
-            class="relative mt-12 border border-borderline bg-panel p-2 sm:p-4 crosshair-container cross-tl cross-tr cross-bl cross-br gsap-reveal">
-            <!-- HUD Top Bar -->
-            <!-- <div
-              class="flex items-center justify-between border-b border-borderline pb-3 mb-3 font-mono text-[11px] text-white/50">
-              <div class="flex items-center gap-3">
-                <span class="text-terracotta font-bold"
-                  >[ HUD // VISUAL_FEED ]</span
+            class="grid lg:grid-cols-[1.05fr_.95fr] gap-14 lg:gap-12 items-center">
+            <!-- Copy column -->
+            <div id="hero-copy">
+              <p class="eyebrow text-clay mb-6">Classes begin August 10th</p>
+
+              <h1
+                class="font-display font-extrabold tracking-[-0.035em] leading-[0.94] text-[13vw] sm:text-[8.2vw] lg:text-[64px] xl:text-[72px] text-white">
+                <span class="line-mask"
+                  ><span class="line-inner">Think Sharper,</span></span
                 >
-                <span class="hidden sm:inline text-white/30">|</span>
-                <span class="hidden sm:inline">SOURCE: TUTORIALS.png</span>
-              </div>
-              <div class="flex items-center gap-4">
-                <span>RES: 4K_NATIVE</span>
-                <span>SCALE: 1:1</span>
-                <span class="w-2 h-2 bg-emerald-500 rounded-full"></span>
-              </div>
-            </div> -->
-
-            <!-- Main Frame Image -->
-            <div
-              class="relative w-full aspect-[21/9] bg-blueprint overflow-hidden border border-white/10 group">
-              <img
-                src="/images/TUTORIALS.png"
-                alt="Burhan Tutorials online mathematics and physics learning visual"
-                class="w-full h-full object-cover object-center filter grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 ease-out"
-                loading="eager"
-                decoding="async"
-                onerror="
-                  this.onerror = null;
-                  this.src =
-                    'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1600&auto=format&fit=crop';
-                " />
-
-              <!-- Overlay Vector Lines & Target Reticle -->
-              <div
-                class="absolute inset-0 bg-grid-dense pointer-events-none opacity-40"></div>
-              <div
-                class="absolute inset-0 border border-white/10 m-4 pointer-events-none"></div>
-
-              <!-- Center Target Visual -->
-              <div
-                class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div
-                  class="w-24 h-24 sm:w-32 sm:h-32 border border-terracotta/40 rounded-full flex items-center justify-center relative">
-                  <div class="w-2 h-2 bg-terracotta rounded-full"></div>
-                  <div class="absolute w-full h-[1px] bg-terracotta/30"></div>
-                  <div class="absolute h-full w-[1px] bg-terracotta/30"></div>
-                </div>
-              </div>
-
-              <!-- HUD Floating Badge -->
-              <div
-                class="absolute bottom-4 left-4 bg-blueprint/90 border border-white/20 p-3 backdrop-blur-md max-w-xs font-mono text-xs">
-                <div class="text-terracotta font-bold mb-1">
-                  FIRST-PRINCIPLES PEDAGOGY
-                </div>
-                <div class="text-white/80 text-[11px]">
-                  Bridging abstract theoretical physics with analytical
-                  mathematical derivations.
-                </div>
-              </div>
-            </div>
-
-            <!-- HUD Bottom Ticker Info -->
-            <!-- <div
-              class="mt-3 flex flex-wrap items-center justify-between gap-4 font-mono text-[11px] text-white/50 border-t border-borderline pt-3">
-              <div>INPUT: SINE WAVES, VECTORS, CALCULUS, MECHANICS</div>
-              <div>OUTPUT: CONCEPTUAL MASTERY & EXAM EXCELLENCE</div>
-            </div> -->
-          </div>
-        </div>
-      </section>
-
-      <!-- WHO WE TEACH SECTION -->
-      <section
-        id="who-we-teach"
-        class="py-20 md:py-28 border-b border-borderline relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <!-- Section Header -->
-          <div
-            class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-borderline">
-            <div>
-              <h2
-                class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight uppercase">
-                WHO WE TEACH
-              </h2>
-            </div>
-            <p class="text-white/60 font-mono text-xs max-w-md mt-4 md:mt-0">
-              Tailored academic frameworks designed specifically for critical
-              transition phases in secondary and tertiary STEM education.
-            </p>
-          </div>
-
-          <!-- 3 High-Density Cards Layout -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Card 1 -->
-            <div
-              class="glass-panel p-8 relative flex flex-col justify-between border border-borderline hover:border-terracotta/50 transition-colors group gsap-reveal">
-              <div
-                class="font-mono text-xs text-terracotta mb-6 flex justify-between items-center">
-                <span>CATEGORY [01]</span>
-                <i
-                  data-lucide="graduation-cap"
-                  class="w-5 h-5 text-white/40 group-hover:text-terracotta transition-colors"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white mb-3">
-                  Senior Secondary Students
-                </h3>
-                <div
-                  class="inline-block bg-white/5 border border-white/10 px-2.5 py-1 text-[11px] font-mono text-terracotta mb-4">
-                  WAEC • NECO • GCE • JAMB / UTME
-                </div>
-                <p class="text-white/70 text-sm leading-relaxed mb-6">
-                  Complete mastery of senior syllabus Mathematics and Physics
-                  for WAEC, NECO, GCE, and JAMB/UTME preparation. Focused
-                  heavily on high-yield exam problem solving, past-question
-                  derivations, and rapid analytical speed.
-                </p>
-              </div>
-              <div
-                class="border-t border-borderline pt-4 font-mono text-[11px] text-white/40 flex justify-between">
-                <span>REGIMEN: EXAM PREP</span>
-                <span>FOCUS: 100%</span>
-              </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div
-              class="glass-panel p-8 relative flex flex-col justify-between border border-borderline hover:border-terracotta/50 transition-colors group gsap-reveal">
-              <div
-                class="font-mono text-xs text-terracotta mb-6 flex justify-between items-center">
-                <span>CATEGORY [02]</span>
-                <i
-                  data-lucide="book-open-check"
-                  class="w-5 h-5 text-white/40 group-hover:text-terracotta transition-colors"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white mb-3">
-                  POST-UTME & 100-Level
-                </h3>
-                <div
-                  class="inline-block bg-white/5 border border-white/10 px-2.5 py-1 text-[11px] font-mono text-terracotta mb-4">
-                  TERTIARY FOUNDATIONS
-                </div>
-                <p class="text-white/70 text-sm leading-relaxed mb-6">
-                  Differential & Integral Calculus, General University Physics
-                  (Mechanics, Waves, Thermodynamics, Electromagnetism), Vectors,
-                  and Trigonometric proofs for undergraduates and students
-                  preparing for university-level foundation studies.
-                </p>
-              </div>
-              <div
-                class="border-t border-borderline pt-4 font-mono text-[11px] text-white/40 flex justify-between">
-                <span>REGIMEN: TERTIARY MATH/PHYS</span>
-                <span>FOCUS: ADVANCED</span>
-              </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div
-              class="glass-panel p-8 relative flex flex-col justify-between border border-borderline hover:border-terracotta/50 transition-colors group gsap-reveal">
-              <div
-                class="font-mono text-xs text-terracotta mb-6 flex justify-between items-center">
-                <span>CATEGORY [03]</span>
-                <i
-                  data-lucide="compass"
-                  class="w-5 h-5 text-white/40 group-hover:text-terracotta transition-colors"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white mb-3">
-                  Foundation Builders
-                </h3>
-                <div
-                  class="inline-block bg-white/5 border border-white/10 px-2.5 py-1 text-[11px] font-mono text-terracotta mb-4">
-                  CONCEPT REBUILDING
-                </div>
-                <p class="text-white/70 text-sm leading-relaxed mb-6">
-                  Designed for students with severe gaps in fundamental
-                  algebraic manipulation, geometric proofs, or basic physical
-                  principles who need a structured restart.
-                </p>
-              </div>
-              <div
-                class="border-t border-borderline pt-4 font-mono text-[11px] text-white/40 flex justify-between">
-                <span>REGIMEN: ROOT RECONSTRUCTION</span>
-                <span>FOCUS: CORE</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- METHODOLOGY & OPERATIONAL RIGOR SECTION -->
-      <section
-        id="methodology"
-        class="py-20 md:py-28 border-b border-borderline relative bg-panel/30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <!-- Section Header -->
-          <div
-            class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-borderline">
-            <div>
-              <h2
-                class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight uppercase">
-                METHODOLOGY & RIGOR
-              </h2>
-            </div>
-            <p class="text-white/60 font-mono text-xs max-w-md mt-4 md:mt-0">
-              We don't rely on inflated claims or pre-recorded mass lectures. We
-              guarantee rigorous operational constraints designed for total
-              understanding.
-            </p>
-          </div>
-
-          <!-- 4 Operational Standards Grid -->
-          <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <!-- Standard 1 -->
-            <div
-              class="border border-borderline p-6 bg-blueprint relative crosshair-container cross-tl cross-br hover:border-terracotta transition-colors gsap-reveal">
-              <div class="font-mono text-2xl font-bold text-terracotta mb-4">
-                01
-              </div>
-              <h3 class="text-lg font-bold text-white mb-2">
-                Max 3 Students / Class
-              </h3>
-              <p class="text-xs text-white/60 leading-relaxed font-sans">
-                Micro-focused group sessions ensure every student asks
-                questions, solves live problems on screen, and receives direct
-                feedback.
-              </p>
-              <div
-                class="mt-4 pt-4 border-t border-borderline text-[10px] font-mono text-white/40">
-                STANDARD: FOCUSED_GROUPS
-              </div>
-            </div>
-
-            <!-- Standard 2 -->
-            <div
-              class="border border-borderline p-6 bg-blueprint relative crosshair-container cross-tl cross-br hover:border-terracotta transition-colors gsap-reveal">
-              <div class="font-mono text-2xl font-bold text-terracotta mb-4">
-                02
-              </div>
-              <h3 class="text-lg font-bold text-white mb-2">
-                100% Live Whiteboard
-              </h3>
-              <p class="text-xs text-white/60 leading-relaxed font-sans">
-                Real-time digital vector whiteboard lectures. Every step,
-                diagram, and equation is derived right before your eyes-minimal
-                pre-made slides.
-              </p>
-              <div
-                class="mt-4 pt-4 border-t border-borderline text-[10px] font-mono text-white/40">
-                STANDARD: LIVE_INTERACTIVE
-              </div>
-            </div>
-
-            <!-- Standard 3 -->
-            <div
-              class="border border-borderline p-6 bg-blueprint relative crosshair-container cross-tl cross-br hover:border-terracotta transition-colors gsap-reveal">
-              <div class="font-mono text-2xl font-bold text-terracotta mb-4">
-                03
-              </div>
-              <h3 class="text-lg font-bold text-white mb-2">
-                First-Principles Derivation
-              </h3>
-              <p class="text-xs text-white/60 leading-relaxed font-sans">
-                Never memorize formulas blindly. We prove mathematical formulas
-                and physics laws from their core physical axioms first.
-              </p>
-              <div
-                class="mt-4 pt-4 border-t border-borderline text-[10px] font-mono text-white/40">
-                STANDARD: CONCEPT_FIRST
-              </div>
-            </div>
-
-            <!-- Standard 4 -->
-            <div
-              class="border border-borderline p-6 bg-blueprint relative crosshair-container cross-tl cross-br hover:border-terracotta transition-colors gsap-reveal">
-              <div class="font-mono text-2xl font-bold text-terracotta mb-4">
-                04
-              </div>
-              <h3 class="text-lg font-bold text-white mb-2">
-                Direct WhatsApp Support
-              </h3>
-              <p class="text-xs text-white/60 leading-relaxed font-sans">
-                Get direct asynchronous academic support for homework, past
-                questions, and challenging practice sets outside class hours.
-              </p>
-              <div
-                class="mt-4 pt-4 border-t border-borderline text-[10px] font-mono text-white/40">
-                STANDARD: ASYNC_QA
-              </div>
-            </div>
-          </div>
-
-          <!-- Private 1-on-1 Callout Box -->
-          <div
-            class="glass-panel p-6 sm:p-8 border border-terracotta/40 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative overflow-hidden gsap-reveal">
-            <div
-              class="absolute -right-10 -bottom-10 opacity-5 text-terracotta font-mono font-black text-9xl pointer-events-none">
-              1:1
-            </div>
-            <div>
-              <div
-                class="inline-flex items-center gap-2 text-terracotta font-mono text-xs mb-2">
-                <i
-                  data-lucide="user-check"
-                  class="w-4 h-4"></i>
-                <span>CUSTOM TUTORING OPTION</span>
-              </div>
-              <h3 class="text-xl sm:text-2xl font-bold text-white">
-                Prefer Private 1-on-1 Coaching?
-              </h3>
-              <p class="text-sm text-white/70 max-w-xl mt-1">
-                In addition to our micro-groups (max 3), students can opt for
-                dedicated 1-on-1 private tutoring tailored entirely to their
-                individual curriculum pace and targets.
-              </p>
-            </div>
-            <a
-              href="https://wa.me/2349039147388?text=Hello%20Burhan%20Tutorials,%20I%20would%20like%20to%20inquire%20about%20Private%201-on-1%20Tutoring."
-              target="_blank"
-              class="whitespace-nowrap bg-white text-blueprint hover:bg-warmgrey font-mono font-bold text-xs uppercase px-6 py-3 border border-white transition-colors">
-              REQUEST 1-ON-1 COACHING
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- INTERACTIVE HTML5 STEM CANVAS SIMULATION -->
-      <!-- <section
-        id="simulation"
-        class="py-20 md:py-28 border-b border-borderline relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-borderline">
-            <div>
-           
-              <h2
-                class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight uppercase">
-                INTERACTIVE PHYSICS SIMULATION
-              </h2>
-            </div>
-            <div class="text-white/60 font-mono text-xs max-w-md mt-4 md:mt-0">
-              Move your cursor across the coordinate grid below to interact with
-              the real-time sine wave harmonic function:
-              <span class="text-terracotta font-mono"
-                >y(x,t) = A·sin(kx - ωt)</span
-              >
-            </div>
-          </div>
-
-          <div
-            class="relative border border-borderline bg-blueprint p-2 sm:p-4 crosshair-container cross-tl cross-tr cross-bl cross-br">
-            <div
-              class="flex flex-wrap items-center justify-between gap-4 border-b border-borderline pb-3 mb-3 font-mono text-xs text-white/60">
-              <div class="flex items-center gap-4">
-                <span class="text-terracotta font-bold"
-                  >[ SIM // WAVE_HARMONICS ]</span
+                <span class="line-mask"
+                  ><span class="line-inner text-clay">Score Higher.</span></span
                 >
-                <span class="hidden sm:inline">STATE: ACTIVE_RENDER</span>
+              </h1>
+
+              <p
+                class="reveal mt-6 text-base sm:text-[17px] leading-relaxed text-white/70 max-w-xl">
+                Live online Mathematics and Physics classes built for real
+                understanding and exam excellence. Small groups, a shared
+                whiteboard, and past questions every single week.
+              </p>
+
+              <p
+                class="reveal mt-5 font-display text-[15px] font-semibold tracking-tight text-white/90">
+                Solve. <span class="text-clay">Understand.</span> Achieve.
+              </p>
+
+              <div class="reveal mt-9 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://wa.me/2349039147388?text=Hello%20Burhan%20Tutors%2C%20I%20want%20to%20reserve%20a%20seat%20for%20the%20August%2010th%20classes."
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-clay px-7 py-4 text-[15px]">
+                  <i
+                    data-lucide="message-circle"
+                    class="w-[18px] h-[18px]"></i>
+                  Reserve your seat
+                </a>
+                <a
+                  href="#method"
+                  class="btn btn-ghost-dark px-7 py-4 text-[15px]">
+                  See how a class runs
+                  <i
+                    data-lucide="arrow-down-right"
+                    class="w-[18px] h-[18px]"></i>
+                </a>
               </div>
-              <div class="flex items-center gap-6 text-[11px]">
-                <span id="canvas-freq">FREQ: 2.40 Hz</span>
-                <span id="canvas-amp">AMP: 60 px</span>
-                <span id="canvas-cursor">CURSOR: (0, 0)</span>
-              </div>
-            </div>
 
-            <div
-              class="relative w-full h-[350px] sm:h-[450px] bg-panel/80 overflow-hidden border border-white/5 cursor-crosshair">
-              <canvas
-                id="physicsCanvas"
-                class="w-full h-full block"></canvas>
-
-              <div
-                class="absolute top-4 left-4 pointer-events-none font-mono text-[11px] text-white/40 bg-blueprint/80 p-2 border border-white/10 backdrop-blur">
-                <div>Eq: y(x,t) = A · sin(k·x - ω·t) · e<sup>-γx</sup></div>
-                <div>Phase Velocity: v = ω / k = 432 px/s</div>
-              </div>
-            </div>
-
-            <div
-              class="mt-3 flex items-center justify-between font-mono text-[11px] text-white/40">
-              <span>HOVER TO DISTORT WAVE AMPLITUDE & FREQUENCY</span>
-              <span>BURHAN TUTORIALS STEM SIM ENGINE</span>
-            </div>
-          </div>
-        </div>
-      </section> -->
-
-      <!-- FAQ SECTION -->
-      <section
-        class="py-20 md:py-28 border-b border-borderline relative bg-panel/20"
-        aria-labelledby="faq-heading">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-borderline">
-            <div>
-              <h2
-                id="faq-heading"
-                class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight uppercase">
-                FREQUENTLY ASKED QUESTIONS
-              </h2>
-            </div>
-            <p class="text-white/60 font-mono text-xs max-w-md mt-4 md:mt-0">
-              Clear answers about our online tutoring approach, lesson format,
-              and pricing for students and parents.
-            </p>
-          </div>
-
-          <div class="grid gap-6 lg:grid-cols-2">
-            <div class="glass-panel p-6 border border-borderline">
-              <h3 class="text-lg font-bold text-white mb-2">
-                What subjects does Burhan Tutorials teach?
-              </h3>
-              <p class="text-sm text-white/70 leading-relaxed">
-                We teach Mathematics and Physics for WAEC, NECO, JAMB/UTME,
-                Post-UTME, and 100-level university foundations.
-              </p>
-            </div>
-            <div class="glass-panel p-6 border border-borderline">
-              <h3 class="text-lg font-bold text-white mb-2">
-                Is the teaching live and interactive?
-              </h3>
-              <p class="text-sm text-white/70 leading-relaxed">
-                Yes. Every session is live, interactive, and focused on deep
-                understanding rather than passive note-taking, whether you are
-                studying locally or learning online from abroad.
-              </p>
-            </div>
-            <div class="glass-panel p-6 border border-borderline">
-              <h3 class="text-lg font-bold text-white mb-2">
-                How many students are in a class?
-              </h3>
-              <p class="text-sm text-white/70 leading-relaxed">
-                We keep class sizes intentionally small, with a maximum of 3
-                students per class for more direct support.
-              </p>
-            </div>
-            <div class="glass-panel p-6 border border-borderline">
-              <h3 class="text-lg font-bold text-white mb-2">
-                How much is tutoring per hour?
-              </h3>
-              <p class="text-sm text-white/70 leading-relaxed">
-                Our standard rate is ₦2,000 per hour, with flexible weekly or
-                monthly payment arrangements available.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PRICING & PAYMENT TERMS SECTION -->
-      <section
-        id="pricing"
-        class="py-20 md:py-28 border-b border-borderline relative bg-panel/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <!-- Section Header -->
-          <div
-            class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-borderline">
-            <div>
-              <h2
-                class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight uppercase">
-                PRICING & TERMS
-              </h2>
-            </div>
-            <p class="text-white/60 font-mono text-xs max-w-md mt-4 md:mt-0">
-              No hidden registration fees or lock-in contracts. Simple hourly
-              rates with flexible payment arrangements.
-            </p>
-          </div>
-
-          <!-- Pricing Card Layout -->
-          <div class="max-w-4xl mx-auto">
-            <div
-              class="glass-panel border-2 border-terracotta/60 p-8 sm:p-12 relative crosshair-container cross-tl cross-tr cross-bl cross-br gsap-reveal">
-              <!-- Top Tag -->
-              <div
-                class="flex justify-between items-start mb-8 border-b border-borderline pb-6">
+              <dl
+                class="reveal mt-11 grid grid-cols-3 gap-4 sm:gap-6 max-w-lg border-t border-white/10 pt-7">
                 <div>
+                  <dt class="sr-only">Students per class</dt>
+                  <dd
+                    class="font-display text-3xl font-extrabold text-white tracking-tight">
+                    <span
+                      class="count"
+                      data-to="3"
+                      >0</span
+                    >
+                  </dd>
+                  <p class="text-[12px] text-white/50 mt-1.5 leading-snug">
+                    students max per class
+                  </p>
+                </div>
+                <div>
+                  <dt class="sr-only">Subjects taught</dt>
+                  <dd
+                    class="font-display text-3xl font-extrabold text-white tracking-tight">
+                    <span
+                      class="count"
+                      data-to="2"
+                      >0</span
+                    >
+                  </dd>
+                  <p class="text-[12px] text-white/50 mt-1.5 leading-snug">
+                    subjects, taught deeply
+                  </p>
+                </div>
+                <div>
+                  <dt class="sr-only">Hourly rate</dt>
+                  <dd
+                    class="font-display text-3xl font-extrabold text-white tracking-tight">
+                    &#8358;<span
+                      class="count"
+                      data-to="2000"
+                      data-sep="1"
+                      >0</span
+                    >
+                  </dd>
+                  <p class="text-[12px] text-white/50 mt-1.5 leading-snug">
+                    per hour, both subjects
+                  </p>
+                </div>
+              </dl>
+            </div>
+
+            <!-- Whiteboard visual -->
+            <div class="reveal">
+              <div class="board p-4 sm:p-5">
+                <div
+                  class="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
+                  <div class="flex items-center gap-2">
+                    <span class="board-dot"></span>
+                    <span class="board-dot"></span>
+                    <span class="board-dot"></span>
+                    <span class="ml-2 font-mono text-[11px] text-white/45"
+                      >whiteboard, session 01</span
+                    >
+                  </div>
                   <span
-                    class="bg-terracotta text-white font-mono text-xs px-3 py-1 font-bold uppercase tracking-wider"
-                    >UNIFIED ACADEMIC RATE</span
-                  >
+                    class="inline-flex items-center gap-2 rounded-md border border-emerald-400/25 px-2.5 py-1">
+                    <span class="status-dot"></span>
+                    <span
+                      class="font-mono text-[10px] tracking-widest text-emerald-300"
+                      >LIVE</span
+                    >
+                  </span>
+                </div>
+
+                <div
+                  id="graph-wrap"
+                  class="rounded-lg bg-ink border border-white/8 p-4">
+                  <svg
+                    viewBox="0 0 420 190"
+                    class="w-full h-[150px] sm:h-[178px]"
+                    role="img"
+                    aria-label="Graph of a quadratic curve plotted on axes">
+                    <line
+                      x1="30"
+                      y1="160"
+                      x2="400"
+                      y2="160"
+                      stroke="rgba(247,246,243,.26)"
+                      stroke-width="1.4" />
+                    <line
+                      x1="30"
+                      y1="18"
+                      x2="30"
+                      y2="160"
+                      stroke="rgba(247,246,243,.26)"
+                      stroke-width="1.4" />
+                    <polygon
+                      points="400,160 392,156 392,164"
+                      fill="rgba(247,246,243,.26)" />
+                    <polygon
+                      points="30,18 26,26 34,26"
+                      fill="rgba(247,246,243,.26)" />
+                    <text
+                      x="404"
+                      y="164"
+                      fill="rgba(247,246,243,.45)"
+                      font-size="11"
+                      font-family="JetBrains Mono">
+                      x
+                    </text>
+                    <text
+                      x="20"
+                      y="18"
+                      fill="rgba(247,246,243,.45)"
+                      font-size="11"
+                      font-family="JetBrains Mono">
+                      y
+                    </text>
+
+                    <path
+                      id="curve"
+                      d="M45 34 C 110 190, 190 190, 250 96 C 290 34, 340 26, 392 32"
+                      fill="none"
+                      stroke="#C15F3C"
+                      stroke-width="2.6"
+                      stroke-linecap="round" />
+
+                    <line
+                      class="graph-extra"
+                      x1="185"
+                      y1="150"
+                      x2="305"
+                      y2="106"
+                      stroke="rgba(247,246,243,.38)"
+                      stroke-width="1.3"
+                      stroke-dasharray="5 5" />
+                    <circle
+                      class="graph-extra"
+                      cx="245"
+                      cy="128"
+                      r="4.5"
+                      fill="#F7F6F3" />
+                    <text
+                      class="graph-extra"
+                      x="258"
+                      y="122"
+                      fill="rgba(247,246,243,.6)"
+                      font-size="10.5"
+                      font-family="JetBrains Mono">
+                      dy/dx
+                    </text>
+                  </svg>
+
+                  <div
+                    class="mt-2 font-mono text-[12px] sm:text-[13px] text-white/75">
+                    <span id="typeline"></span
+                    ><span
+                      class="caret"
+                      aria-hidden="true"></span>
+                  </div>
+                </div>
+
+                <div class="mt-4 grid grid-cols-2 gap-2.5">
+                  <div
+                    class="spine h-9"
+                    style="background: #16324f">
+                    CALCULUS
+                  </div>
+                  <div
+                    class="spine h-9"
+                    style="
+                      background: #c15f3c;
+                      border-left-color: rgba(255, 255, 255, 0.4);
+                    ">
+                    PHYSICS
+                  </div>
+                  <div
+                    class="spine h-9"
+                    style="background: #16324f">
+                    ALGEBRA
+                  </div>
+                  <div
+                    class="spine h-9"
+                    style="background: #16324f">
+                    MECHANICS
+                  </div>
+                </div>
+
+                <div
+                  class="mt-4 pt-4 border-t border-white/10 flex items-center justify-between gap-3">
+                  <div
+                    class="flex items-center gap-2 font-mono text-[11px] text-white/50">
+                    <i
+                      data-lucide="users"
+                      class="w-3.5 h-3.5 text-clay"></i>
+                    3 seats in this room
+                  </div>
+                  <div
+                    class="flex items-center gap-2 font-mono text-[11px] text-white/50">
+                    <i
+                      data-lucide="clock"
+                      class="w-3.5 h-3.5 text-clay"></i>
+                    90-120 min
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4 flex flex-wrap gap-2.5">
+                <span class="chip-formula">E = mc&sup2;</span>
+                <span class="chip-formula">F = ma</span>
+                <span class="chip-formula">a&sup2; + b&sup2; = c&sup2;</span>
+                <span class="chip-formula">V = IR</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= EXAM MARQUEE ================= -->
+      <section
+        class="theme-ink2 border-y border-white/10 py-5 overflow-hidden"
+        aria-label="Exams we prepare for">
+        <div
+          class="marquee items-center gap-10 font-display font-semibold text-[15px] sm:text-[17px] text-white/40">
+          <span class="flex items-center gap-10 pr-10">
+            <span>SSCE</span><span class="text-clay">&bull;</span>
+            <span>WAEC</span><span class="text-clay">&bull;</span>
+            <span>GCE</span><span class="text-clay">&bull;</span>
+            <span>NECO</span><span class="text-clay">&bull;</span>
+            <span>JAMB / UTME</span><span class="text-clay">&bull;</span>
+            <span>POST-UTME</span><span class="text-clay">&bull;</span>
+            <span>100 LEVEL</span><span class="text-clay">&bull;</span>
+          </span>
+          <span
+            class="flex items-center gap-10 pr-10"
+            aria-hidden="true">
+            <span>SSCE</span><span class="text-clay">&bull;</span>
+            <span>WAEC</span><span class="text-clay">&bull;</span>
+            <span>GCE</span><span class="text-clay">&bull;</span>
+            <span>NECO</span><span class="text-clay">&bull;</span>
+            <span>JAMB / UTME</span><span class="text-clay">&bull;</span>
+            <span>POST-UTME</span><span class="text-clay">&bull;</span>
+            <span>100 LEVEL</span><span class="text-clay">&bull;</span>
+          </span>
+        </div>
+      </section>
+
+      <!-- ================= SUBJECTS ================= -->
+      <section
+        id="subjects"
+        class="theme-cream py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="reveal max-w-2xl">
+            <p class="eyebrow text-clay mb-3">What we teach</p>
+            <h2
+              class="font-display text-3xl sm:text-4xl md:text-[44px] font-extrabold tracking-[-0.03em] leading-[1.06]">
+              Two subjects. Taught properly.
+            </h2>
+            <div class="rule-clay my-6"></div>
+            <p class="text-[15px] sm:text-base text-ink/65 leading-relaxed">
+              We do not spread thin across ten subjects. Mathematics and Physics
+              are the two that decide admission, and they are the two we teach
+              every day.
+            </p>
+          </div>
+
+          <div class="mt-14 grid md:grid-cols-2 gap-6">
+            <article class="card-light reveal p-7 sm:p-9">
+              <div class="flex items-start justify-between gap-4 mb-7">
+                <div>
+                  <span class="eyebrow text-clay">Subject 01</span>
                   <h3
-                    class="text-2xl sm:text-3xl font-extrabold text-white mt-3">
-                    Standard Hourly Billing
+                    class="font-display text-2xl sm:text-[28px] font-extrabold tracking-tight mt-2">
+                    Mathematics
                   </h3>
                 </div>
-                <div class="text-right font-mono">
-                  <div class="text-4xl sm:text-5xl font-black text-white">
-                    ₦2,000
-                  </div>
-                  <div class="text-xs text-terracotta font-bold mt-1">
-                    / HOUR
-                  </div>
-                </div>
+                <span
+                  class="w-12 h-12 rounded-lg bg-ink grid place-items-center shrink-0">
+                  <i
+                    data-lucide="sigma"
+                    class="w-5 h-5 text-clay"></i>
+                </span>
               </div>
 
-              <!-- Feature Checklist Grid -->
-              <div
-                class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 font-sans text-sm text-white/80">
-                <div class="flex items-center gap-3">
-                  <i
-                    data-lucide="check-circle"
-                    class="w-4 h-4 text-terracotta flex-shrink-0"></i>
-                  <span>max 3 Students per class session</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <i
-                    data-lucide="check-circle"
-                    class="w-4 h-4 text-terracotta flex-shrink-0"></i>
-                  <span>Live interactive digital whiteboard access</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <i
-                    data-lucide="check-circle"
-                    class="w-4 h-4 text-terracotta flex-shrink-0"></i>
-                  <span>Concept-first derivation worksheets included</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <i
-                    data-lucide="check-circle"
-                    class="w-4 h-4 text-terracotta flex-shrink-0"></i>
-                  <span>Direct WhatsApp tutor support for homework</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <i
-                    data-lucide="check-circle"
-                    class="w-4 h-4 text-terracotta flex-shrink-0"></i>
-                  <span>WAEC, NECO, JAMB & 100L university syllabus</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <i
-                    data-lucide="check-circle"
-                    class="w-4 h-4 text-terracotta flex-shrink-0"></i>
-                  <span>Option to request 1-on-1 private coaching</span>
-                </div>
-              </div>
+              <p class="text-[14.5px] text-ink/65 leading-relaxed mb-7">
+                From the algebra that everything else stands on, up to the
+                calculus that 100 level throws at you in week one.
+              </p>
 
-              <!-- Payment Terms Banner -->
-              <div
-                class="bg-blueprint/90 border border-white/10 p-4 font-mono text-xs text-white/70 mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div class="flex items-center gap-2">
+              <ul
+                class="grid sm:grid-cols-2 gap-x-6 gap-y-3 text-[14px] text-ink/80">
+                <li class="flex items-start gap-2.5">
                   <i
-                    data-lucide="credit-card"
-                    class="w-4 h-4 text-terracotta"></i>
-                  <span class="text-white font-bold"
-                    >FLEXIBLE PAYMENT TERMS:</span
-                  >
-                </div>
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Algebra and indices
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Surds and logarithms
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Quadratic equations
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Trigonometry
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Coordinate geometry
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Sequences and series
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Differentiation
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Integration
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Statistics and probability
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Vectors and matrices
+                </li>
+              </ul>
+
+              <div class="mt-8 pt-6 border-t border-ink/10">
+                <span
+                  class="font-mono text-[10.5px] tracking-wider uppercase rounded-md border border-ink/15 px-3 py-1.5 text-ink/60"
+                  >Further Maths topics on request</span
+                >
+              </div>
+            </article>
+
+            <article class="card-light reveal p-7 sm:p-9">
+              <div class="flex items-start justify-between gap-4 mb-7">
                 <div>
-                  Flexible weekly or monthly payment options based on prior
-                  agreement.
+                  <span class="eyebrow text-clay">Subject 02</span>
+                  <h3
+                    class="font-display text-2xl sm:text-[28px] font-extrabold tracking-tight mt-2">
+                    Physics
+                  </h3>
                 </div>
+                <span
+                  class="w-12 h-12 rounded-lg bg-ink grid place-items-center shrink-0">
+                  <i
+                    data-lucide="atom"
+                    class="w-5 h-5 text-clay"></i>
+                </span>
               </div>
 
-              <!-- Action Button -->
-              <a
-                href="https://wa.me/2349039147388?text=Hello%20Burhan%20Tutorials,%20I%20want%20to%20register%20for%20the%20N2,000/hr%20tutoring."
-                target="_blank"
-                class="block w-full text-center bg-terracotta hover:bg-terracotta-hover text-white font-mono font-bold text-sm tracking-wider uppercase py-4 border border-terracotta transition-all shadow-xl shadow-terracotta/20">
-                SECURE YOUR SPOT FOR TUTORIAL
-              </a>
+              <p class="text-[14.5px] text-ink/65 leading-relaxed mb-7">
+                Every topic starts with what is physically happening, then the
+                formula. Formulas you can derive are formulas you never forget.
+              </p>
+
+              <ul
+                class="grid sm:grid-cols-2 gap-x-6 gap-y-3 text-[14px] text-ink/80">
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Motion and kinematics
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Forces and momentum
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Work, energy and power
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Waves and sound
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Light and optics
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Heat and thermodynamics
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Current electricity
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Magnetism and induction
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Fields and gravitation
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Modern and nuclear physics
+                </li>
+              </ul>
+
+              <div class="mt-8 pt-6 border-t border-ink/10">
+                <span
+                  class="font-mono text-[10.5px] tracking-wider uppercase rounded-md border border-ink/15 px-3 py-1.5 text-ink/60"
+                  >Practical and calculation drills included</span
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= WHO IT'S FOR ================= -->
+      <section
+        id="students"
+        class="theme-ink py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            class="reveal flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14">
+            <div class="max-w-2xl">
+              <p class="eyebrow text-clay mb-3">Who it's for</p>
+              <h2
+                class="font-display text-3xl sm:text-4xl md:text-[44px] font-extrabold tracking-[-0.03em] leading-[1.06] text-white">
+                Built for the two years that decide everything.
+              </h2>
+              <div class="rule-clay mt-6"></div>
+            </div>
+            <p class="text-[14.5px] text-white/55 max-w-sm leading-relaxed">
+              Secondary school and university foundation students, taught on
+              separate tracks so nobody sits through work that is below or above
+              them.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <article class="card-dark reveal p-7 sm:p-8">
+              <span
+                class="w-12 h-12 rounded-lg border border-clay/35 grid place-items-center mb-6">
+                <i
+                  data-lucide="graduation-cap"
+                  class="w-5 h-5 text-clay"></i>
+              </span>
+              <span class="eyebrow text-white/35">Track 01</span>
+              <h3 class="font-display text-xl font-bold text-white mt-2 mb-3.5">
+                Senior secondary
+              </h3>
+              <p class="text-[14px] text-white/60 leading-relaxed mb-6">
+                SS1 to SS3 students working towards SSCE, WAEC, GCE and NECO. We
+                follow the syllabus topic by topic and close the gaps left over
+                from junior secondary.
+              </p>
+              <ul class="space-y-2.5 text-[13.5px] text-white/70">
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Full WAEC and NECO syllabus coverage
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Theory and objective technique
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Timed practice from real past papers
+                </li>
+              </ul>
+            </article>
+
+            <article class="card-dark reveal p-7 sm:p-8">
+              <span
+                class="w-12 h-12 rounded-lg border border-clay/35 grid place-items-center mb-6">
+                <i
+                  data-lucide="landmark"
+                  class="w-5 h-5 text-clay"></i>
+              </span>
+              <span class="eyebrow text-white/35">Track 02</span>
+              <h3 class="font-display text-xl font-bold text-white mt-2 mb-3.5">
+                University foundation
+              </h3>
+              <p class="text-[14px] text-white/60 leading-relaxed mb-6">
+                100 level students in engineering, sciences and medicine, where
+                the pace jumps overnight and the first semester decides your
+                CGPA baseline.
+              </p>
+              <ul class="space-y-2.5 text-[13.5px] text-white/70">
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >MTH and PHY first year courses
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Calculus and mechanics foundations
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Tutorial questions worked line by line
+                </li>
+              </ul>
+            </article>
+
+            <article class="card-dark reveal p-7 sm:p-8">
+              <span
+                class="w-12 h-12 rounded-lg border border-clay/35 grid place-items-center mb-6">
+                <i
+                  data-lucide="target"
+                  class="w-5 h-5 text-clay"></i>
+              </span>
+              <span class="eyebrow text-white/35">Track 03</span>
+              <h3 class="font-display text-xl font-bold text-white mt-2 mb-3.5">
+                Exam candidates
+              </h3>
+              <p class="text-[14px] text-white/60 leading-relaxed mb-6">
+                Anyone sitting JAMB, UTME or Post-UTME this cycle, including
+                students retaking to push a score high enough for a competitive
+                course.
+              </p>
+              <ul class="space-y-2.5 text-[13.5px] text-white/70">
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Speed methods for CBT questions
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Topic frequency analysis
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i
+                    data-lucide="check"
+                    class="w-4 h-4 text-clay mt-0.5 shrink-0"></i
+                  >Mock sittings under exam timing
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= THE DIFFERENCE ================= -->
+      <section
+        id="difference"
+        class="theme-sand py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="reveal max-w-3xl mb-14">
+            <p class="eyebrow text-clay mb-3">Why Burhan Tutors</p>
+            <h2
+              class="font-display text-3xl sm:text-4xl md:text-[44px] font-extrabold tracking-[-0.03em] leading-[1.06]">
+              Live classes built for real understanding and exam excellence.
+            </h2>
+            <div class="rule-clay mt-6"></div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <article class="card-light reveal p-7">
+              <span
+                class="w-11 h-11 rounded-lg border border-clay/30 grid place-items-center mb-5">
+                <i
+                  data-lucide="radio"
+                  class="w-[18px] h-[18px] text-clay"></i>
+              </span>
+              <h3 class="font-display text-[17px] font-bold mb-2.5">
+                Live, never pre-recorded
+              </h3>
+              <p class="text-[13.5px] text-ink/60 leading-relaxed">
+                You can stop the tutor in the middle of a solution and say you
+                did not get it. That one thing is the whole difference between a
+                class and a video.
+              </p>
+            </article>
+
+            <article class="card-light reveal p-7">
+              <span
+                class="w-11 h-11 rounded-lg border border-clay/30 grid place-items-center mb-5">
+                <i
+                  data-lucide="users"
+                  class="w-[18px] h-[18px] text-clay"></i>
+              </span>
+              <h3 class="font-display text-[17px] font-bold mb-2.5">
+                Three students maximum
+              </h3>
+              <p class="text-[13.5px] text-ink/60 leading-relaxed">
+                Small enough that every student gets called on, gets their
+                working checked, and cannot quietly fall behind for three weeks.
+              </p>
+            </article>
+
+            <article class="card-light reveal p-7">
+              <span
+                class="w-11 h-11 rounded-lg border border-clay/30 grid place-items-center mb-5">
+                <i
+                  data-lucide="lightbulb"
+                  class="w-[18px] h-[18px] text-clay"></i>
+              </span>
+              <h3 class="font-display text-[17px] font-bold mb-2.5">
+                Concept before formula
+              </h3>
+              <p class="text-[13.5px] text-ink/60 leading-relaxed">
+                We derive it on the board first. Cramming fails the moment the
+                examiner changes the wording, and examiners always change the
+                wording.
+              </p>
+            </article>
+
+            <article class="card-light reveal p-7">
+              <span
+                class="w-11 h-11 rounded-lg border border-clay/30 grid place-items-center mb-5">
+                <i
+                  data-lucide="file-check-2"
+                  class="w-[18px] h-[18px] text-clay"></i>
+              </span>
+              <h3 class="font-display text-[17px] font-bold mb-2.5">
+                Past questions every week
+              </h3>
+              <p class="text-[13.5px] text-ink/60 leading-relaxed">
+                Understanding is proven under exam conditions. Every week ends
+                with real past questions, timed, then marked and corrected
+                together.
+              </p>
+            </article>
+          </div>
+
+          <div class="reveal mt-14 rounded-xl bg-ink text-cream p-8 sm:p-12">
+            <div class="max-w-3xl">
+              <i
+                data-lucide="quote"
+                class="w-8 h-8 text-clay mb-5"></i>
+              <p
+                class="font-display text-xl sm:text-2xl md:text-[30px] font-bold tracking-[-0.025em] leading-[1.25]">
+                A student who understands why the formula works will pass an
+                exam they have never seen. A student who memorised it is hoping
+                the questions repeat.
+              </p>
+              <p class="eyebrow text-white/40 mt-7">
+                The teaching principle at Burhan Tutors
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ENROLLMENT CTA BANNER -->
+      <!-- ================= METHOD ================= -->
       <section
-        class="py-20 border-b border-borderline relative bg-gradient-to-b from-blueprint to-panel">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div
-            class="inline-flex items-center gap-2 px-3 py-1 border border-emerald-500/30 bg-emerald-500/10 font-mono text-xs text-emerald-400 mb-6">
-            <span
-              class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            NEXT COHORT: AUGUST 1ST LAUNCH
+        id="method"
+        class="theme-cream py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="reveal max-w-2xl mb-16">
+            <p class="eyebrow text-clay mb-3">How it works</p>
+            <h2
+              class="font-display text-3xl sm:text-4xl md:text-[44px] font-extrabold tracking-[-0.03em] leading-[1.06]">
+              Four steps, repeated every week.
+            </h2>
+            <div class="rule-clay my-6"></div>
+            <p class="text-[15px] text-ink/65 leading-relaxed">
+              Nothing here is complicated. It is simply done consistently, which
+              is the part most students never get.
+            </p>
           </div>
 
+          <div
+            id="method-grid"
+            class="relative grid md:grid-cols-4 gap-10 md:gap-6">
+            <div
+              class="rail"
+              aria-hidden="true">
+              <div class="rail-fill"></div>
+            </div>
+
+            <div class="step reveal relative flex md:block gap-5">
+              <div class="step-num relative z-10 shrink-0">01</div>
+              <div class="md:mt-7">
+                <h3 class="font-display text-lg font-bold mb-2.5">Diagnose</h3>
+                <p class="text-[14px] text-ink/62 leading-relaxed">
+                  A short check before your first class tells us exactly which
+                  topics are shaky. We start where the gap actually is, not at
+                  chapter one.
+                </p>
+              </div>
+            </div>
+
+            <div class="step reveal relative flex md:block gap-5">
+              <div class="step-num relative z-10 shrink-0">02</div>
+              <div class="md:mt-7">
+                <h3 class="font-display text-lg font-bold mb-2.5">Build</h3>
+                <p class="text-[14px] text-ink/62 leading-relaxed">
+                  Live on a shared whiteboard, the idea is built from the ground
+                  up and the formula is derived in front of you, step by visible
+                  step.
+                </p>
+              </div>
+            </div>
+
+            <div class="step reveal relative flex md:block gap-5">
+              <div class="step-num relative z-10 shrink-0">03</div>
+              <div class="md:mt-7">
+                <h3 class="font-display text-lg font-bold mb-2.5">Drill</h3>
+                <p class="text-[14px] text-ink/62 leading-relaxed">
+                  Real past questions, timed the way the exam times them. You
+                  solve, we mark together, and every wrong step gets traced back
+                  to its cause.
+                </p>
+              </div>
+            </div>
+
+            <div class="step reveal relative flex md:block gap-5">
+              <div class="step-num relative z-10 shrink-0">04</div>
+              <div class="md:mt-7">
+                <h3 class="font-display text-lg font-bold mb-2.5">Track</h3>
+                <p class="text-[14px] text-ink/62 leading-relaxed">
+                  A weekly note on what improved and what is still weak, sent to
+                  you and, if you are in secondary school, to your parent.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="reveal mt-16 rounded-xl border border-ink/12 bg-white p-7 sm:p-9">
+            <p class="eyebrow text-clay mb-6">Included in every class</p>
+            <div
+              class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 text-[14px] text-ink/78">
+              <div class="flex items-start gap-3">
+                <i
+                  data-lucide="presentation"
+                  class="w-[18px] h-[18px] text-clay mt-0.5 shrink-0"></i
+                >Live shared digital whiteboard
+              </div>
+              <div class="flex items-start gap-3">
+                <i
+                  data-lucide="video"
+                  class="w-[18px] h-[18px] text-clay mt-0.5 shrink-0"></i
+                >Session recording for revision
+              </div>
+              <div class="flex items-start gap-3">
+                <i
+                  data-lucide="notebook-pen"
+                  class="w-[18px] h-[18px] text-clay mt-0.5 shrink-0"></i
+                >Weekly worked worksheet
+              </div>
+              <div class="flex items-start gap-3">
+                <i
+                  data-lucide="message-circle"
+                  class="w-[18px] h-[18px] text-clay mt-0.5 shrink-0"></i
+                >WhatsApp support between classes
+              </div>
+              <div class="flex items-start gap-3">
+                <i
+                  data-lucide="calendar-check"
+                  class="w-[18px] h-[18px] text-clay mt-0.5 shrink-0"></i
+                >Schedule that fits around school
+              </div>
+              <div class="flex items-start gap-3">
+                <i
+                  data-lucide="trending-up"
+                  class="w-[18px] h-[18px] text-clay mt-0.5 shrink-0"></i
+                >Written progress report
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= LAUNCH COUNTDOWN ================= -->
+      <section
+        id="launch"
+        class="theme-ink py-20 md:py-28">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p class="reveal eyebrow text-clay mb-5">Enrolment open now</p>
+
           <h2
-            class="text-3xl sm:text-5xl font-black text-white tracking-tight uppercase mb-6">
-            READY TO MASTER MATHEMATICS & PHYSICS?
+            class="reveal font-display text-3xl sm:text-4xl md:text-[46px] font-extrabold tracking-[-0.03em] leading-[1.06] text-white">
+            First classes begin <span class="text-clay">August 10th</span>
           </h2>
 
           <p
-            class="text-base sm:text-lg text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Classes start within
-            <span class="text-white font-bold">Preferred period</span>. With a
-            strict limit of 3 students per micro-cohort, seats fill rapidly.
-            Contact us directly on WhatsApp to confirm your schedule.
+            class="reveal mt-5 text-[15px] sm:text-base text-white/60 max-w-xl mx-auto leading-relaxed">
+            Seats are filled in the order they are reserved, and each class
+            stops at three students. Once the three are taken, the next opening
+            is the following cohort.
           </p>
 
           <div
-            class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://wa.me/2349039147388?text=Hello%20Burhan%20Tutorials,%20I%20am%20interested%20in%20joining%20the%20tutorial."
-              target="_blank"
-              class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-terracotta hover:bg-terracotta-hover text-white px-8 py-4 font-mono font-bold text-sm tracking-wider uppercase border border-terracotta transition-all shadow-xl shadow-terracotta/20">
-              <i
-                data-lucide="message-square"
-                class="w-5 h-5"></i>
-              <span>WHATSAPP: 0903 914 7388</span>
-            </a>
+            id="countdown"
+            class="reveal mt-11 grid grid-cols-4 gap-2.5 sm:gap-4 max-w-2xl mx-auto">
+            <div class="cd-cell">
+              <div
+                class="cd-num text-3xl sm:text-5xl text-white"
+                data-cd="d">
+                00
+              </div>
+              <div
+                class="eyebrow text-white/40 mt-2.5 text-[9px] sm:text-[10px]">
+                Days
+              </div>
+            </div>
+            <div class="cd-cell">
+              <div
+                class="cd-num text-3xl sm:text-5xl text-white"
+                data-cd="h">
+                00
+              </div>
+              <div
+                class="eyebrow text-white/40 mt-2.5 text-[9px] sm:text-[10px]">
+                Hours
+              </div>
+            </div>
+            <div class="cd-cell">
+              <div
+                class="cd-num text-3xl sm:text-5xl text-white"
+                data-cd="m">
+                00
+              </div>
+              <div
+                class="eyebrow text-white/40 mt-2.5 text-[9px] sm:text-[10px]">
+                Minutes
+              </div>
+            </div>
+            <div class="cd-cell">
+              <div
+                class="cd-num text-3xl sm:text-5xl text-clay"
+                data-cd="s">
+                00
+              </div>
+              <div
+                class="eyebrow text-white/40 mt-2.5 text-[9px] sm:text-[10px]">
+                Seconds
+              </div>
+            </div>
           </div>
 
-          <div class="mt-8 font-mono text-xs text-white/40">
-            DIRECT ACADEMIC LINE: +234 903 914 7388
+          <p
+            id="cd-note"
+            class="reveal mt-6 font-mono text-[11.5px] text-white/40">
+            Monday, 10 August 2026 &middot; 9:00 AM West Africa Time
+          </p>
+
+          <div
+            class="reveal mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="https://wa.me/2349039147388?text=Hello%20Burhan%20Tutors%2C%20I%20want%20to%20reserve%20a%20seat%20for%20the%20August%2010th%20classes."
+              target="_blank"
+              rel="noopener"
+              class="btn btn-clay px-7 py-4 text-[15px]">
+              <i
+                data-lucide="message-circle"
+                class="w-[18px] h-[18px]"></i>
+              Reserve your seat now
+            </a>
+            <a
+              href="#pricing"
+              class="btn btn-ghost-dark px-7 py-4 text-[15px]"
+              >See what it costs</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PRICING ================= -->
+      <section
+        id="pricing"
+        class="theme-cream py-20 md:py-28">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="reveal text-center max-w-2xl mx-auto mb-14">
+            <p class="eyebrow text-clay mb-3">Pricing</p>
+            <h2
+              class="font-display text-3xl sm:text-4xl md:text-[44px] font-extrabold tracking-[-0.03em] leading-[1.06]">
+              One rate. No packages to decode.
+            </h2>
+            <div class="rule-clay my-6 mx-auto"></div>
+            <p class="text-[15px] text-ink/65 leading-relaxed">
+              The same rate covers Mathematics and Physics. No registration fee,
+              no material fee, no tier that unlocks the good tutor.
+            </p>
+          </div>
+
+          <div class="reveal card-light overflow-hidden">
+            <div class="grid md:grid-cols-[1fr_.85fr]">
+              <div class="p-8 sm:p-10">
+                <span class="eyebrow text-clay">Standard rate</span>
+                <div class="flex items-end gap-2 mt-4 mb-1">
+                  <span
+                    class="font-display text-5xl sm:text-6xl font-extrabold tracking-[-0.04em]"
+                    >&#8358;2,000</span
+                  >
+                  <span
+                    class="font-display text-lg font-semibold text-ink/45 pb-2"
+                    >/ hour</span
+                  >
+                </div>
+                <p class="text-[14px] text-ink/60 leading-relaxed mb-8">
+                  Pay weekly or monthly, whichever is easier for your household.
+                  Agree the schedule first, settle after.
+                </p>
+
+                <ul class="space-y-3.5 text-[14px] text-ink/80">
+                  <li class="flex items-start gap-3">
+                    <i
+                      data-lucide="check-circle-2"
+                      class="w-[18px] h-[18px] text-clay mt-0.5 shrink-0"></i
+                    >Mathematics and Physics, one rate
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i
+                      data-lucide="check-circle-2"
+                      class="w-[18px] h-[18px] text-clay mt-0.5 shrink-0"></i
+                    >Three students maximum per class
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i
+                      data-lucide="check-circle-2"
+                      class="w-[18px] h-[18px] text-clay mt-0.5 shrink-0"></i
+                    >Live whiteboard plus session recording
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i
+                      data-lucide="check-circle-2"
+                      class="w-[18px] h-[18px] text-clay mt-0.5 shrink-0"></i
+                    >Weekly worksheets and past questions
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i
+                      data-lucide="check-circle-2"
+                      class="w-[18px] h-[18px] text-clay mt-0.5 shrink-0"></i
+                    >WhatsApp support between classes
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i
+                      data-lucide="check-circle-2"
+                      class="w-[18px] h-[18px] text-clay mt-0.5 shrink-0"></i
+                    >Written progress report each month
+                  </li>
+                </ul>
+
+                <a
+                  href="https://wa.me/2349039147388?text=Hello%20Burhan%20Tutors%2C%20I%20want%20to%20register%20for%20classes%20at%20%E2%82%A62%2C000%20per%20hour."
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-ink w-full mt-9 py-4 text-[15px]">
+                  <i
+                    data-lucide="message-circle"
+                    class="w-[18px] h-[18px]"></i>
+                  Register on WhatsApp
+                </a>
+              </div>
+
+              <div class="bg-ink text-cream p-8 sm:p-10">
+                <span class="eyebrow text-white/40">Also available</span>
+
+                <div class="mt-6 space-y-6">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <i
+                        data-lucide="user"
+                        class="w-[18px] h-[18px] text-clay"></i>
+                      <h3 class="font-display text-[16px] font-bold text-white">
+                        One-on-one lessons
+                      </h3>
+                    </div>
+                    <p class="text-[13.5px] text-white/55 leading-relaxed">
+                      Full attention on a single student, at a rate agreed
+                      before you start.
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <i
+                        data-lucide="calendar-clock"
+                        class="w-[18px] h-[18px] text-clay"></i>
+                      <h3 class="font-display text-[16px] font-bold text-white">
+                        Exam sprint blocks
+                      </h3>
+                    </div>
+                    <p class="text-[13.5px] text-white/55 leading-relaxed">
+                      Intensive weeks close to WAEC, NECO or JAMB, focused only
+                      on scoring topics.
+                    </p>
+                  </div>
+
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <i
+                        data-lucide="users-round"
+                        class="w-[18px] h-[18px] text-clay"></i>
+                      <h3 class="font-display text-[16px] font-bold text-white">
+                        Bring a classmate
+                      </h3>
+                    </div>
+                    <p class="text-[13.5px] text-white/55 leading-relaxed">
+                      Register together and take the same slot. Message us to
+                      arrange it.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-white/10">
+                  <p
+                    class="font-mono text-[11px] text-white/40 leading-relaxed">
+                    Ask any question before you pay. No obligation to book after
+                    asking.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FAQ ================= -->
+      <section
+        id="faq"
+        class="theme-sand py-20 md:py-28">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="reveal text-center mb-12">
+            <p class="eyebrow text-clay mb-3">Questions</p>
+            <h2
+              class="font-display text-3xl sm:text-4xl md:text-[42px] font-extrabold tracking-[-0.03em] leading-[1.06]">
+              Everything parents and students ask
+            </h2>
+            <div class="rule-clay mt-6 mx-auto"></div>
+          </div>
+
+          <div class="reveal border-t border-ink/12">
+            <details class="faq">
+              <summary class="text-[16px] sm:text-[17px]">
+                Which exams do you prepare students for?
+                <i
+                  data-lucide="chevron-down"
+                  class="chev w-5 h-5 text-ink/45"></i>
+              </summary>
+              <div class="faq-body">
+                <div>
+                  <p class="pb-6 text-[14.5px] text-ink/65 leading-relaxed">
+                    SSCE, WAEC, GCE, NECO, JAMB and UTME, and Post-UTME
+                    screening. We also teach 100 level university Mathematics
+                    and Physics for students already in their first year.
+                  </p>
+                </div>
+              </div>
+            </details>
+
+            <details class="faq">
+              <summary class="text-[16px] sm:text-[17px]">
+                Are classes live or pre-recorded?
+                <i
+                  data-lucide="chevron-down"
+                  class="chev w-5 h-5 text-ink/45"></i>
+              </summary>
+              <div class="faq-body">
+                <div>
+                  <p class="pb-6 text-[14.5px] text-ink/65 leading-relaxed">
+                    Every class is live on a shared digital whiteboard. You can
+                    interrupt, ask, and have the same step worked again until it
+                    lands. The session is recorded afterwards so you can revise
+                    it before the next class.
+                  </p>
+                </div>
+              </div>
+            </details>
+
+            <details class="faq">
+              <summary class="text-[16px] sm:text-[17px]">
+                How many students are in a class?
+                <i
+                  data-lucide="chevron-down"
+                  class="chev w-5 h-5 text-ink/45"></i>
+              </summary>
+              <div class="faq-body">
+                <div>
+                  <p class="pb-6 text-[14.5px] text-ink/65 leading-relaxed">
+                    Three at most. That limit exists so the tutor can see every
+                    student's working and correct mistakes the same day they
+                    happen. One-on-one slots are available if you would rather
+                    learn alone.
+                  </p>
+                </div>
+              </div>
+            </details>
+
+            <details class="faq">
+              <summary class="text-[16px] sm:text-[17px]">
+                What do I need to join a class?
+                <i
+                  data-lucide="chevron-down"
+                  class="chev w-5 h-5 text-ink/45"></i>
+              </summary>
+              <div class="faq-body">
+                <div>
+                  <p class="pb-6 text-[14.5px] text-ink/65 leading-relaxed">
+                    A phone or laptop, a workable data connection, and a
+                    notebook with a pen. The meeting app is free and we send the
+                    link before every class. Nothing else to buy.
+                  </p>
+                </div>
+              </div>
+            </details>
+
+            <details class="faq">
+              <summary class="text-[16px] sm:text-[17px]">
+                How much is it and how do I pay?
+                <i
+                  data-lucide="chevron-down"
+                  class="chev w-5 h-5 text-ink/45"></i>
+              </summary>
+              <div class="faq-body">
+                <div>
+                  <p class="pb-6 text-[14.5px] text-ink/65 leading-relaxed">
+                    &#8358;2,000 per hour, covering both Mathematics and
+                    Physics. You can pay weekly or monthly. Payment details are
+                    shared on WhatsApp once your schedule is agreed.
+                  </p>
+                </div>
+              </div>
+            </details>
+
+            <details class="faq">
+              <summary class="text-[16px] sm:text-[17px]">
+                What if a class clashes with school or I miss one?
+                <i
+                  data-lucide="chevron-down"
+                  class="chev w-5 h-5 text-ink/45"></i>
+              </summary>
+              <div class="faq-body">
+                <div>
+                  <p class="pb-6 text-[14.5px] text-ink/65 leading-relaxed">
+                    Tell us before the class and we move it where the schedule
+                    allows. If you still miss it, you get the recording and the
+                    worksheet, and we cover the questions you got stuck on at
+                    the start of the next session.
+                  </p>
+                </div>
+              </div>
+            </details>
+
+            <details class="faq">
+              <summary class="text-[16px] sm:text-[17px]">
+                When exactly do classes start?
+                <i
+                  data-lucide="chevron-down"
+                  class="chev w-5 h-5 text-ink/45"></i>
+              </summary>
+              <div class="faq-body">
+                <div>
+                  <p class="pb-6 text-[14.5px] text-ink/65 leading-relaxed">
+                    August 10th. Reserve before then and your slot is held.
+                    Message 0903 914 7388 on WhatsApp and we will confirm your
+                    day and time.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <p class="reveal mt-10 text-center text-[14px] text-ink/55">
+            Still unsure?
+            <a
+              href="https://wa.me/2349039147388?text=Hello%20Burhan%20Tutors%2C%20I%20have%20a%20question%20about%20your%20classes."
+              target="_blank"
+              rel="noopener"
+              class="text-clay font-semibold underline underline-offset-4 hover:text-ink transition-colors">
+              Ask on WhatsApp
+            </a>
+            and we will answer plainly.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= FINAL CTA ================= -->
+      <section
+        id="contact"
+        class="theme-ink py-20 md:py-28">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-[1.15fr_.85fr] gap-10 items-center">
+            <div class="reveal">
+              <p class="eyebrow text-clay mb-4">Secure your spot</p>
+              <h2
+                class="font-display text-3xl sm:text-4xl md:text-[46px] font-extrabold tracking-[-0.03em] leading-[1.05] text-white">
+                Solve. Understand. <span class="text-clay">Achieve.</span>
+              </h2>
+              <p
+                class="mt-6 text-[15px] sm:text-base text-white/62 leading-relaxed max-w-lg">
+                Send one message and we will confirm your day, your time, and
+                which track you belong in. Classes begin August 10th and each
+                room holds three students.
+              </p>
+
+              <div class="mt-9 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://wa.me/2349039147388?text=Hello%20Burhan%20Tutors%2C%20I%20want%20to%20reserve%20a%20seat%20for%20the%20August%2010th%20classes."
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-clay px-7 py-4 text-[15px]">
+                  <i
+                    data-lucide="message-circle"
+                    class="w-[18px] h-[18px]"></i>
+                  Chat on WhatsApp
+                </a>
+                <a
+                  href="tel:+2349039147388"
+                  class="btn btn-ghost-dark px-7 py-4 text-[15px]">
+                  <i
+                    data-lucide="phone"
+                    class="w-[18px] h-[18px]"></i>
+                  0903 914 7388
+                </a>
+              </div>
+
+              <div
+                class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-3 font-mono text-[11.5px] text-white/40">
+                <span class="flex items-center gap-2"
+                  ><i
+                    data-lucide="globe"
+                    class="w-3.5 h-3.5 text-clay"></i
+                  >burhantutors.netlify.app</span
+                >
+                <span class="flex items-center gap-2"
+                  ><i
+                    data-lucide="map-pin"
+                    class="w-3.5 h-3.5 text-clay"></i
+                  >Online, anywhere in Nigeria</span
+                >
+              </div>
+            </div>
+
+            <div class="reveal">
+              <div class="card-dark p-7 sm:p-8 text-center">
+                <p class="eyebrow text-white/40 mb-6">
+                  Scan to reserve your seat
+                </p>
+                <div
+                  id="qr"
+                  class="mx-auto w-[168px] h-[168px] rounded-lg bg-white p-3 grid place-items-center overflow-hidden"
+                  aria-label="QR code linking to burhantutors.netlify.app">
+                  <span class="font-mono text-[10px] text-ink/40">loading</span>
+                </div>
+                <p class="mt-6 font-display text-[15px] font-bold text-white">
+                  burhantutors.netlify.app
+                </p>
+                <p class="mt-2 text-[13px] text-white/45 leading-relaxed">
+                  Point your camera here, or share this page with a classmate
+                  taking the same exam.
+                </p>
+                <button
+                  id="copy-link"
+                  class="btn btn-ghost-dark w-full mt-6 py-3 text-[13.5px]"
+                  type="button">
+                  <i
+                    data-lucide="link"
+                    class="w-4 h-4"></i>
+                  <span id="copy-label">Copy page link</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- MINIMAL ENGINEERING FOOTER -->
-    <footer
-      class="bg-blueprint border-t border-borderline py-12 font-mono text-xs text-white/50">
+    <!-- ================= FOOTER ================= -->
+    <footer class="theme-ink2 border-t border-white/10 py-14">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-b border-borderline pb-8">
-          <!-- Footer Brand -->
-          <div class="flex items-center gap-3">
-            <div
-              class="w-32 h-32 border border-white/20 bg-panel p-1 flex items-center justify-center">
-              <img
-                src="/images/burhan.png"
-                alt="BT"
-                class="w-full h-full object-contain"
-                onerror="
-                  this.onerror = null;
-                  this.src =
-                    'https://placehold.co/100x100/0C1C2E/C15F3C?text=BT';
-                " />
+          class="grid md:grid-cols-[1.3fr_1fr_1fr] gap-10 pb-10 border-b border-white/10">
+          <div>
+            <div class="flex items-center gap-3 mb-5">
+              <span
+                class="w-12 h-12 rounded-lg overflow-hidden bg-ink border border-white/12 grid place-items-center">
+                <img
+                  src="/images/burhan-dark.png"
+                  alt="Burhan Tutors logo"
+                  class="w-[190%] max-w-none"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                  decoding="async" />
+              </span>
+              <span class="flex flex-col leading-none">
+                <span class="font-display font-semibold text-[15px] text-white"
+                  >BURHAN <span class="text-clay">TUTORS</span></span
+                >
+                <span class="eyebrow text-white/40 mt-1 text-[9px]"
+                  >Think Sharper, Score Higher</span
+                >
+              </span>
             </div>
-            <div>
-              <div class="text-white font-bold font-sans">BURHAN TUTORIALS</div>
-              <div class="text-[10px] text-white/40">
-                "Solve. Understand. Achieve."
-              </div>
-            </div>
+            <p class="text-[13.5px] text-white/50 leading-relaxed max-w-sm">
+              Live online Mathematics and Physics classes for secondary school
+              and university foundation students. Solve. Understand. Achieve.
+            </p>
           </div>
 
-          <!-- Footer Links -->
-          <div class="flex flex-wrap gap-6 text-[11px]">
-            <a
-              href="#who-we-teach"
-              class="hover:text-terracotta transition-colors"
-              >AUDIENCE</a
-            >
-            <a
-              href="#methodology"
-              class="hover:text-terracotta transition-colors"
-              >METHODOLOGY</a
-            >
-            <!-- <a
-              href="#simulation"
-              class="hover:text-terracotta transition-colors"
-              >LAB_CANVAS</a
-            > -->
-            <a
-              href="#pricing"
-              class="hover:text-terracotta transition-colors"
-              >PRICING</a
-            >
-            <a
-              href="https://wa.me/2349039147388?text=Hello%20Burhan%20Tutorials,%20I%20am%20interested%20in%20joining%20the%20tutorial."
-              target="_blank"
-              class="hover:text-terracotta transition-colors"
-              >CONTACT</a
-            >
+          <nav aria-label="Footer">
+            <p class="eyebrow text-white/35 mb-5">Explore</p>
+            <ul class="space-y-3 text-[13.5px] text-white/60">
+              <li>
+                <a
+                  href="#subjects"
+                  class="hover:text-clay transition-colors"
+                  >Subjects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#students"
+                  class="hover:text-clay transition-colors"
+                  >Who it's for</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#difference"
+                  class="hover:text-clay transition-colors"
+                  >Why Burhan Tutors</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#method"
+                  class="hover:text-clay transition-colors"
+                  >How it works</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#pricing"
+                  class="hover:text-clay transition-colors"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#faq"
+                  class="hover:text-clay transition-colors"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <div>
+            <p class="eyebrow text-white/35 mb-5">Contact</p>
+            <ul class="space-y-3 text-[13.5px] text-white/60">
+              <li>
+                <a
+                  href="https://wa.me/2349039147388?text=Hello%20Burhan%20Tutors%2C%20I%20want%20to%20reserve%20a%20seat%20for%20the%20August%2010th%20classes."
+                  target="_blank"
+                  rel="noopener"
+                  class="flex items-center gap-2.5 hover:text-clay transition-colors">
+                  <i
+                    data-lucide="message-circle"
+                    class="w-4 h-4"></i
+                  >WhatsApp us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+2349039147388"
+                  class="flex items-center gap-2.5 hover:text-clay transition-colors">
+                  <i
+                    data-lucide="phone"
+                    class="w-4 h-4"></i
+                  >0903 914 7388
+                </a>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i
+                  data-lucide="calendar"
+                  class="w-4 h-4"></i
+                >Classes from August 10th
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i
+                  data-lucide="globe"
+                  class="w-4 h-4"></i
+                >Online, Nigeria wide
+              </li>
+            </ul>
           </div>
         </div>
 
-        <!-- Bottom Copyright & Technical Tag -->
         <div
-          class="mt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px]">
-          <div>
-            &copy; 2026 BURHAN TUTORIALS. ALL RIGHTS RESERVED. ACADEMIC
-            SPECIFICATION V1.0.
-          </div>
-          <div class="text-white/30">
-            BUILT WITH HIGH-DENSITY EDITORIAL BLUEPRINT SYSTEM
-          </div>
+          class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[11px] text-white/35">
+          <p>
+            &copy; <span id="year">2026</span> Burhan Tutors. All rights
+            reserved.
+          </p>
+          <p>Solve. Understand. Achieve.</p>
         </div>
       </div>
     </footer>
 
-    <!-- SCRIPTS: GSAP, SCROLLTRIGGER, LENIS & INTERACTIVE CANVAS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <a
+      id="wa-float"
+      href="https://wa.me/2349039147388?text=Hello%20Burhan%20Tutors%2C%20I%20want%20to%20reserve%20a%20seat%20for%20the%20August%2010th%20classes."
+      target="_blank"
+      rel="noopener"
+      class="btn btn-clay px-5 py-3.5 text-[14px]"
+      aria-label="Chat with Burhan Tutors on WhatsApp">
+      <i
+        data-lucide="message-circle"
+        class="w-[18px] h-[18px]"></i>
+      <span class="hidden sm:inline">Reserve a seat</span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs@04f46c6/qrcode.min.js"></script>
 
     <script>
-      // 1. Initialize Lucide Icons
-      lucide.createIcons();
+      (function () {
+        "use strict";
 
-      // 2. Initialize Lenis Smooth Scroll with GSAP ScrollTrigger Integration
-      const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smoothWheel: true,
-      });
+        var reduced = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
 
-      lenis.on("scroll", ScrollTrigger.update);
+        /* ---------- Icons ---------- */
+        function drawIcons() {
+          if (
+            window.lucide &&
+            typeof window.lucide.createIcons === "function"
+          ) {
+            window.lucide.createIcons();
+          }
+        }
+        drawIcons();
 
-      gsap.ticker.add((time) => {
-        lenis.raf(time * 1000);
-      });
+        document.getElementById("year").textContent = new Date().getFullYear();
 
-      gsap.ticker.lagSmoothing(0);
+        /* ---------- Nav state + progress bar ---------- */
+        var nav = document.getElementById("nav");
+        var bar = document.getElementById("progressbar");
+        var waFloat = document.getElementById("wa-float");
+        var sections = Array.prototype.slice.call(
+          document.querySelectorAll("section[id]"),
+        );
+        var navLinks = Array.prototype.slice.call(
+          document.querySelectorAll(".nav-link"),
+        );
+        var methodGrid = document.getElementById("method-grid");
+        var railFill = methodGrid
+          ? methodGrid.querySelector(".rail-fill")
+          : null;
+        var ticking = false;
 
-      // 3. GSAP ScrollTrigger Entrance Animations
-      gsap.registerPlugin(ScrollTrigger);
+        function update() {
+          var y = window.scrollY || document.documentElement.scrollTop;
 
-      gsap.utils.toArray(".gsap-reveal").forEach((el) => {
-        gsap.fromTo(
-          el,
-          { opacity: 0, y: 30 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 85%",
-              toggleActions: "play none none none",
-            },
+          nav.classList.toggle("is-stuck", y > 12);
+          waFloat.classList.toggle("on", y > 620);
+
+          var h = document.documentElement.scrollHeight - window.innerHeight;
+          bar.style.transform =
+            "scaleX(" + (h > 0 ? Math.min(y / h, 1) : 0) + ")";
+
+          var current = "";
+          for (var i = 0; i < sections.length; i++) {
+            if (sections[i].offsetTop - 140 <= y) current = sections[i].id;
+          }
+          for (var j = 0; j < navLinks.length; j++) {
+            navLinks[j].classList.toggle(
+              "is-active",
+              navLinks[j].getAttribute("href") === "#" + current,
+            );
+          }
+
+          /* method rail fill, tied directly to scroll position */
+          if (railFill && methodGrid) {
+            var r = methodGrid.getBoundingClientRect();
+            var vh = window.innerHeight;
+            var p = (vh * 0.82 - r.top) / (r.height + vh * 0.2);
+            p = Math.max(0, Math.min(1, p));
+            railFill.style.transform =
+              window.innerWidth >= 768
+                ? "scaleX(" + p + ")"
+                : "scaleY(" + p + ")";
+          }
+
+          ticking = false;
+        }
+
+        function onScroll() {
+          if (!ticking) {
+            ticking = true;
+            window.requestAnimationFrame(update);
+          }
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll, { passive: true });
+        update();
+
+        /* ---------- Mobile menu ---------- */
+        var menuBtn = document.getElementById("menu-btn");
+        var menu = document.getElementById("mobile-menu");
+        var menuIconWrap = document.getElementById("menu-icon-wrap");
+        var menuOpen = false;
+
+        function setMenu(open) {
+          menuOpen = open;
+          menu.style.maxHeight = open ? menu.scrollHeight + "px" : "0px";
+          menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+          menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+          menuIconWrap.innerHTML =
+            '<i data-lucide="' +
+            (open ? "x" : "menu") +
+            '" class="w-5 h-5"></i>';
+          drawIcons();
+        }
+        menuBtn.addEventListener("click", function () {
+          setMenu(!menuOpen);
+        });
+        Array.prototype.forEach.call(
+          document.querySelectorAll(".mob-link"),
+          function (l) {
+            l.addEventListener("click", function () {
+              if (menuOpen) setMenu(false);
+            });
           },
         );
-      });
+        window.addEventListener("resize", function () {
+          if (window.innerWidth >= 1024 && menuOpen) setMenu(false);
+        });
 
-      // 4. Interactive Physics Wave Canvas Simulation
-      const canvas = document.getElementById("physicsCanvas");
-      const ctx = canvas.getContext("2d");
-
-      let width = (canvas.width = canvas.offsetWidth);
-      let height = (canvas.height = canvas.offsetHeight);
-
-      window.addEventListener("resize", () => {
-        width = canvas.width = canvas.offsetWidth;
-        height = canvas.height = canvas.offsetHeight;
-      });
-
-      // Mouse tracking state
-      let mouse = {
-        x: width / 2,
-        y: height / 2,
-        targetX: width / 2,
-        targetY: height / 2,
-        hovered: false,
-      };
-
-      canvas.addEventListener("mousemove", (e) => {
-        const rect = canvas.getBoundingClientRect();
-        mouse.x = e.clientX - rect.left;
-        mouse.y = e.clientY - rect.top;
-        mouse.hovered = true;
-
-        // Update UI HUD text
-        document.getElementById("canvas-cursor").innerText =
-          `CURSOR: (${Math.round(mouse.x)}, ${Math.round(mouse.y)})`;
-      });
-
-      canvas.addEventListener("mouseleave", () => {
-        mouse.hovered = false;
-        document.getElementById("canvas-cursor").innerText =
-          `CURSOR: (OFF_CANVAS)`;
-      });
-
-      let step = 0;
-
-      function drawGrid() {
-        ctx.strokeStyle = "rgba(255, 255, 255, 0.05)";
-        ctx.lineWidth = 1;
-
-        const gridSize = 30;
-        for (let x = 0; x < width; x += gridSize) {
-          ctx.beginPath();
-          ctx.moveTo(x, 0);
-          ctx.lineTo(x, height);
-          ctx.stroke();
-        }
-        for (let y = 0; y < height; y += gridSize) {
-          ctx.beginPath();
-          ctx.moveTo(0, y);
-          ctx.lineTo(width, y);
-          ctx.stroke();
+        /* ---------- Reveal on scroll ---------- */
+        var revealEls = Array.prototype.slice.call(
+          document.querySelectorAll(".reveal"),
+        );
+        if (reduced || !("IntersectionObserver" in window)) {
+          revealEls.forEach(function (el) {
+            el.classList.add("revealed");
+          });
+        } else {
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                var el = entry.target;
+                var sibs = Array.prototype.slice
+                  .call(el.parentElement ? el.parentElement.children : [])
+                  .filter(function (n) {
+                    return n.classList && n.classList.contains("reveal");
+                  });
+                var idx = Math.max(0, sibs.indexOf(el));
+                el.style.transitionDelay = Math.min(idx * 80, 320) + "ms";
+                el.classList.add("revealed");
+                io.unobserve(el);
+              });
+            },
+            { threshold: 0.1, rootMargin: "0px 0px -6% 0px" },
+          );
+          revealEls.forEach(function (el) {
+            io.observe(el);
+          });
         }
 
-        // Draw Central Axis
-        ctx.strokeStyle = "rgba(255, 255, 255, 0.15)";
-        ctx.beginPath();
-        ctx.moveTo(0, height / 2);
-        ctx.lineTo(width, height / 2);
-        ctx.stroke();
-      }
-
-      function animate() {
-        ctx.clearRect(0, 0, width, height);
-
-        drawGrid();
-
-        // Dynamic physics parameters controlled by mouse proximity
-        let baseAmplitude = 50;
-        let baseFrequency = 0.015;
-
-        if (mouse.hovered) {
-          baseAmplitude = 30 + ((height - mouse.y) / height) * 80;
-          baseFrequency = 0.008 + (mouse.x / width) * 0.025;
+        /* ---------- Hero headline ---------- */
+        var heroCopy = document.getElementById("hero-copy");
+        if (heroCopy) {
+          window.requestAnimationFrame(function () {
+            window.requestAnimationFrame(function () {
+              heroCopy.classList.add("hero-in");
+            });
+          });
         }
 
-        // Update HUD Stats
-        document.getElementById("canvas-amp").innerText =
-          `AMP: ${Math.round(baseAmplitude)} px`;
-        document.getElementById("canvas-freq").innerText =
-          `FREQ: ${(baseFrequency * 150).toFixed(2)} Hz`;
-
-        // Draw Sine Wave Line
-        ctx.beginPath();
-        ctx.lineWidth = 2.5;
-        ctx.strokeStyle = "#C15F3C";
-
-        for (let x = 0; x < width; x++) {
-          // Wave Equation: y = A * sin(k*x - omega*t)
-          const distanceToMouse = Math.abs(x - mouse.x);
-          let localDistortion = 0;
-          if (mouse.hovered && distanceToMouse < 120) {
-            localDistortion = Math.cos(distanceToMouse * 0.05) * 20;
-          }
-
-          const y =
-            height / 2 +
-            Math.sin(x * baseFrequency - step) * baseAmplitude +
-            localDistortion;
-
-          if (x === 0) {
-            ctx.moveTo(x, y);
+        /* ---------- Hero graph draw ---------- */
+        var curve = document.getElementById("curve");
+        var graphWrap = document.getElementById("graph-wrap");
+        if (curve && graphWrap) {
+          var len = curve.getTotalLength();
+          curve.style.strokeDasharray = len;
+          curve.style.strokeDashoffset = reduced ? 0 : len;
+          if (reduced) {
+            graphWrap.classList.add("graph-in");
           } else {
-            ctx.lineTo(x, y);
+            setTimeout(function () {
+              curve.style.strokeDashoffset = 0;
+              graphWrap.classList.add("graph-in");
+            }, 420);
           }
         }
-        ctx.stroke();
 
-        // Draw Vector Nodes / Data Points on Wave
-        ctx.fillStyle = "#FFFFFF";
-        for (let x = 20; x < width; x += 60) {
-          const y =
-            height / 2 + Math.sin(x * baseFrequency - step) * baseAmplitude;
-          ctx.beginPath();
-          ctx.arc(x, y, 3, 0, Math.PI * 2);
-          ctx.fill();
-
-          // Draw vertical indicator line to center axis
-          ctx.strokeStyle = "rgba(193, 95, 60, 0.2)";
-          ctx.lineWidth = 1;
-          ctx.beginPath();
-          ctx.moveTo(x, height / 2);
-          ctx.lineTo(x, y);
-          ctx.stroke();
+        /* ---------- Typewriter working line ---------- */
+        var typeline = document.getElementById("typeline");
+        if (typeline) {
+          var phrases = [
+            "y = ax² + bx + c",
+            "dy/dx = 2ax + b",
+            "s = ut + ½at²",
+            "v² = u² + 2as",
+            "F = ma",
+            "V = IR",
+          ];
+          if (reduced) {
+            typeline.textContent = phrases[0];
+          } else {
+            var pi = 0,
+              ci = 0,
+              del = false;
+            (function type() {
+              var word = phrases[pi];
+              ci += del ? -1 : 1;
+              typeline.textContent = word.slice(0, ci);
+              var wait = del ? 38 : 78;
+              if (!del && ci === word.length) {
+                wait = 1500;
+                del = true;
+              } else if (del && ci === 0) {
+                del = false;
+                pi = (pi + 1) % phrases.length;
+                wait = 320;
+              }
+              setTimeout(type, wait);
+            })();
+          }
         }
 
-        step += 0.04;
-        requestAnimationFrame(animate);
-      }
+        /* ---------- Count up stats ---------- */
+        var counters = Array.prototype.slice.call(
+          document.querySelectorAll(".count"),
+        );
+        function runCount(el) {
+          var to = parseInt(el.getAttribute("data-to"), 10) || 0;
+          var sep = el.hasAttribute("data-sep");
+          if (reduced) {
+            el.textContent = sep ? to.toLocaleString("en-US") : to;
+            return;
+          }
+          var start = null,
+            dur = 1200;
+          function step(ts) {
+            if (start === null) start = ts;
+            var p = Math.min((ts - start) / dur, 1);
+            var v = Math.round(to * (1 - Math.pow(1 - p, 3)));
+            el.textContent = sep ? v.toLocaleString("en-US") : v;
+            if (p < 1) window.requestAnimationFrame(step);
+          }
+          window.requestAnimationFrame(step);
+        }
+        if ("IntersectionObserver" in window) {
+          var cio = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                  runCount(e.target);
+                  cio.unobserve(e.target);
+                }
+              });
+            },
+            { threshold: 0.6 },
+          );
+          counters.forEach(function (c) {
+            cio.observe(c);
+          });
+        } else {
+          counters.forEach(runCount);
+        }
 
-      animate();
+        /* ---------- FAQ: one open at a time ---------- */
+        var faqs = Array.prototype.slice.call(
+          document.querySelectorAll("details.faq"),
+        );
+        faqs.forEach(function (d) {
+          d.addEventListener("toggle", function () {
+            if (!d.open) return;
+            faqs.forEach(function (o) {
+              if (o !== d) o.open = false;
+            });
+          });
+        });
+
+        /* ---------- Countdown ---------- */
+        var target = new Date("2026-08-10T09:00:00+01:00").getTime();
+        var cdEls = {
+          d: document.querySelector('[data-cd="d"]'),
+          h: document.querySelector('[data-cd="h"]'),
+          m: document.querySelector('[data-cd="m"]'),
+          s: document.querySelector('[data-cd="s"]'),
+        };
+        var cdNote = document.getElementById("cd-note");
+
+        function pad(n) {
+          return n < 10 ? "0" + n : "" + n;
+        }
+        function tickCountdown() {
+          var diff = target - Date.now();
+          if (diff <= 0) {
+            Object.keys(cdEls).forEach(function (k) {
+              if (cdEls[k]) cdEls[k].textContent = "00";
+            });
+            if (cdNote) {
+              cdNote.textContent =
+                "Classes are now running. Message us to join the current cohort.";
+            }
+            return false;
+          }
+          var s = Math.floor(diff / 1000);
+          var vals = {
+            d: pad(Math.floor(s / 86400)),
+            h: pad(Math.floor((s % 86400) / 3600)),
+            m: pad(Math.floor((s % 3600) / 60)),
+            s: pad(s % 60),
+          };
+          Object.keys(vals).forEach(function (k) {
+            if (cdEls[k] && cdEls[k].textContent !== vals[k])
+              cdEls[k].textContent = vals[k];
+          });
+          return true;
+        }
+        if (tickCountdown()) {
+          var cdTimer = setInterval(function () {
+            if (!tickCountdown()) clearInterval(cdTimer);
+          }, 1000);
+        }
+
+        /* ---------- QR code ---------- */
+        var qrBox = document.getElementById("qr");
+        var siteUrl = "https://burhantutors.netlify.app/";
+        if (qrBox) {
+          try {
+            if (!window.QRCode) throw new Error("qr unavailable");
+            qrBox.innerHTML = "";
+            new QRCode(qrBox, {
+              text: siteUrl,
+              width: 144,
+              height: 144,
+              colorDark: "#081423",
+              colorLight: "#ffffff",
+              correctLevel: QRCode.CorrectLevel.M,
+            });
+          } catch (err) {
+            qrBox.innerHTML =
+              '<span class="font-mono text-[10px] text-ink/55 leading-snug px-2">burhantutors<br>.netlify.app</span>';
+          }
+        }
+
+        /* ---------- Copy link ---------- */
+        var copyBtn = document.getElementById("copy-link");
+        var copyLabel = document.getElementById("copy-label");
+        if (copyBtn) {
+          copyBtn.addEventListener("click", function () {
+            function done() {
+              copyLabel.textContent = "Link copied";
+              setTimeout(function () {
+                copyLabel.textContent = "Copy page link";
+              }, 2000);
+            }
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard
+                .writeText(siteUrl)
+                .then(done)
+                .catch(function () {
+                  copyLabel.textContent = siteUrl;
+                });
+            } else {
+              var ta = document.createElement("textarea");
+              ta.value = siteUrl;
+              document.body.appendChild(ta);
+              ta.select();
+              try {
+                document.execCommand("copy");
+                done();
+              } catch (e) {
+                copyLabel.textContent = siteUrl;
+              }
+              document.body.removeChild(ta);
+            }
+          });
+        }
+      })();
     </script>
   </body>
 </html>
