@@ -1,0 +1,477 @@
+:root {
+  --ink: #081423;
+  --ink-2: #0c1c2e;
+  --ink-3: #12283f;
+  --clay: #c15f3c;
+  --clay-hi: #d97d5a;
+  --cream: #f7f6f3;
+  --sand: #efebe4;
+  --line-dark: rgba(247, 246, 243, 0.11);
+  --line-light: rgba(8, 20, 35, 0.13);
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Native scrolling. No scroll hijacking, no inertia library.
+         Behaves identically on trackpad, mouse wheel, touch and keyboard. */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  background: var(--ink);
+  color: var(--cream);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--clay);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ink);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(247, 246, 243, 0.2);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clay);
+}
+
+:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.font-display {
+  font-family: "Sora", sans-serif;
+}
+
+/* ---------- Section themes: flat, no gradients ---------- */
+.theme-cream {
+  background: var(--cream);
+  color: var(--ink);
+}
+.theme-sand {
+  background: var(--sand);
+  color: var(--ink);
+}
+.theme-ink {
+  background: var(--ink);
+  color: var(--cream);
+}
+.theme-ink2 {
+  background: var(--ink-2);
+  color: var(--cream);
+}
+
+/* ---------- Nav ---------- */
+.nav-shell {
+  background: rgba(8, 20, 35, 0.86);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid transparent;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+.nav-shell.is-stuck {
+  background: rgba(8, 20, 35, 0.97);
+  border-bottom-color: var(--line-dark);
+}
+.nav-link {
+  position: relative;
+  padding-bottom: 3px;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1.5px;
+  width: 0;
+  background: var(--clay);
+  transition: width 0.28s ease;
+}
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  width: 100%;
+}
+.nav-link.is-active {
+  color: #fff;
+}
+
+#progressbar {
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border-radius: 10px;
+  transition:
+    background 0.22s ease,
+    color 0.22s ease,
+    border-color 0.22s ease,
+    transform 0.18s ease;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn-clay {
+  background: var(--clay);
+  color: #fff;
+}
+.btn-clay:hover {
+  background: var(--clay-hi);
+}
+.btn-ghost-dark {
+  border: 1px solid rgba(247, 246, 243, 0.24);
+  color: var(--cream);
+}
+.btn-ghost-dark:hover {
+  border-color: var(--clay);
+  color: var(--clay-hi);
+}
+.btn-ink {
+  background: var(--ink);
+  color: var(--cream);
+}
+.btn-ink:hover {
+  background: var(--ink-3);
+}
+
+/* ---------- Cards: flat fills, 1px borders ---------- */
+.card-dark {
+  background: var(--ink-2);
+  border: 1px solid var(--line-dark);
+  border-radius: 14px;
+  transition:
+    border-color 0.28s ease,
+    background 0.28s ease;
+}
+.card-dark:hover {
+  border-color: rgba(193, 95, 60, 0.6);
+  background: var(--ink-3);
+}
+.card-light {
+  background: #fff;
+  border: 1px solid var(--line-light);
+  border-radius: 14px;
+  transition:
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
+}
+.card-light:hover {
+  border-color: rgba(193, 95, 60, 0.65);
+  box-shadow: 0 2px 0 0 rgba(193, 95, 60, 0.16);
+}
+
+.eyebrow {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.rule-clay {
+  width: 44px;
+  height: 3px;
+  background: var(--clay);
+  border-radius: 2px;
+}
+
+/* ---------- Hero headline reveal ---------- */
+.line-mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+}
+.line-inner {
+  display: block;
+  transform: translateY(108%);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hero-in .line-inner {
+  transform: translateY(0);
+}
+.hero-in .line-mask:nth-child(2) .line-inner {
+  transition-delay: 0.1s;
+}
+
+/* ---------- Marquee ---------- */
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-run 38s linear infinite;
+}
+.marquee:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee-run {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------- Whiteboard hero visual: flat ---------- */
+.board {
+  background: var(--ink-2);
+  border: 1px solid var(--line-dark);
+  border-radius: 16px;
+}
+.board-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 9999px;
+  background: rgba(247, 246, 243, 0.18);
+}
+
+.chip-formula {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--line-dark);
+  background: var(--ink);
+  color: rgba(247, 246, 243, 0.8);
+  white-space: nowrap;
+}
+
+#curve {
+  transition: stroke-dashoffset 1.6s ease-in-out;
+}
+.graph-extra {
+  opacity: 0;
+  transition: opacity 0.5s ease 1.3s;
+}
+.graph-in .graph-extra {
+  opacity: 1;
+}
+
+.caret::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 1.05em;
+  margin-left: 3px;
+  background: var(--clay);
+  vertical-align: -0.16em;
+  animation: blink 1.05s steps(1) infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.spine {
+  border-radius: 3px 6px 6px 3px;
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 14px;
+  color: rgba(247, 246, 243, 0.92);
+  border: 1px solid var(--line-dark);
+  border-left: 5px solid rgba(247, 246, 243, 0.22);
+  transition: transform 0.28s ease;
+}
+.spine:hover {
+  transform: translateX(6px);
+}
+
+/* ---------- Method rail ---------- */
+.rail {
+  position: absolute;
+  left: 27px;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  background: rgba(8, 20, 35, 0.12);
+}
+.rail-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: var(--clay);
+  transform-origin: 50% 0;
+  transform: scaleY(0);
+}
+@media (min-width: 768px) {
+  .rail {
+    left: 0;
+    right: 0;
+    top: 27px;
+    bottom: auto;
+    width: auto;
+    height: 2px;
+  }
+  .rail-fill {
+    inset: 0 0 auto 0;
+    width: 100%;
+    height: 2px;
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+  }
+}
+
+.step-num {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  border: 2px solid rgba(8, 20, 35, 0.14);
+  color: var(--ink);
+  transition:
+    background 0.28s ease,
+    color 0.28s ease,
+    border-color 0.28s ease;
+}
+.step:hover .step-num {
+  background: var(--clay);
+  border-color: var(--clay);
+  color: #fff;
+}
+
+/* ---------- Countdown ---------- */
+.cd-cell {
+  background: var(--ink-2);
+  border: 1px solid var(--line-dark);
+  border-radius: 12px;
+  padding: 18px 10px;
+  text-align: center;
+  transition: border-color 0.28s ease;
+}
+.cd-cell:hover {
+  border-color: rgba(193, 95, 60, 0.55);
+}
+.cd-num {
+  font-family: "Sora", sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- FAQ ---------- */
+details.faq {
+  border-bottom: 1px solid var(--line-light);
+}
+details.faq summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 0;
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  transition: color 0.22s ease;
+}
+details.faq summary::-webkit-details-marker {
+  display: none;
+}
+details.faq summary:hover {
+  color: var(--clay);
+}
+details.faq .chev {
+  flex: none;
+  transition: transform 0.3s ease;
+}
+details.faq[open] .chev {
+  transform: rotate(180deg);
+  color: var(--clay);
+}
+details.faq .faq-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.34s ease;
+}
+details.faq[open] .faq-body {
+  grid-template-rows: 1fr;
+}
+details.faq .faq-body > div {
+  overflow: hidden;
+}
+
+/* ---------- Reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.revealed {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---------- Floating WhatsApp ---------- */
+#wa-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 60;
+  opacity: 0;
+  transform: translateY(14px);
+  pointer-events: none;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+#wa-float.on {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .line-inner {
+    transform: none;
+  }
+}
