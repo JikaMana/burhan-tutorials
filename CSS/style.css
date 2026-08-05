@@ -456,6 +456,169 @@ details.faq .faq-body > div {
   pointer-events: auto;
 }
 
+/* ---------- Cost calculator ---------- */
+#calc-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(8, 20, 35, 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.26s ease,
+    visibility 0.26s ease;
+}
+#calc-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.calc-panel {
+  width: 100%;
+  max-width: 430px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  background: var(--cream);
+  color: var(--ink);
+  border-radius: 16px;
+  padding: 28px;
+  transform: translateY(14px) scale(0.985);
+  transition: transform 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#calc-overlay.is-open .calc-panel {
+  transform: none;
+}
+
+.calc-close {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: rgba(8, 20, 35, 0.5);
+  border: 1px solid var(--line-light);
+  transition:
+    color 0.22s ease,
+    border-color 0.22s ease;
+}
+.calc-close:hover {
+  color: var(--clay);
+  border-color: var(--clay);
+}
+
+.calc-field label {
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(8, 20, 35, 0.5);
+  margin-bottom: 8px;
+}
+
+.calc-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.calc-step button {
+  width: 42px;
+  height: 46px;
+  flex: none;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  border: 1px solid var(--line-light);
+  color: var(--ink);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+.calc-step button:hover {
+  background: var(--clay);
+  border-color: var(--clay);
+  color: #fff;
+}
+.calc-step input {
+  flex: 1;
+  height: 46px;
+  min-width: 0;
+  text-align: center;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--line-light);
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  transition: border-color 0.2s ease;
+}
+.calc-step input:focus {
+  outline: none;
+  border-color: var(--clay);
+}
+.calc-step input::-webkit-outer-spin-button,
+.calc-step input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calc-step input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.calc-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.calc-toggle button {
+  height: 44px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--line-light);
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  font-size: 13.5px;
+  color: rgba(8, 20, 35, 0.6);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+.calc-toggle button:hover {
+  border-color: rgba(193, 95, 60, 0.5);
+  color: var(--ink);
+}
+.calc-toggle button[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--cream);
+}
+
+.calc-total {
+  background: var(--ink);
+  color: var(--cream);
+  border-radius: 12px;
+  padding: 22px;
+  text-align: center;
+}
+.calc-total-num {
+  font-family: "Sora", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

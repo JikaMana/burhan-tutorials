@@ -453,7 +453,7 @@
 
               <p
                 class="reveal mt-5 font-display text-[15px] font-semibold tracking-tight text-white/90">
-                Solve. <span class="text-clay">Understand.</span> Achieve.
+                Solve. <span class="text-clay">Understand.</span> Excel.
               </p>
 
               <div class="reveal mt-9 flex flex-col sm:flex-row gap-3">
@@ -1421,10 +1421,20 @@
                     >/ hour</span
                   >
                 </div>
-                <p class="text-[14px] text-ink/60 leading-relaxed mb-8">
+                <p class="text-[14px] text-ink/60 leading-relaxed mb-6">
                   Pay weekly or monthly, whichever is easier for your household.
                   Agree the schedule first, settle after.
                 </p>
+
+                <button
+                  id="calc-btn"
+                  type="button"
+                  class="inline-flex items-center gap-2 text-[13px] font-semibold text-clay hover:text-ink transition-colors mb-8">
+                  <i
+                    data-lucide="calculator"
+                    class="w-4 h-4"></i>
+                  Calculate your cost
+                </button>
 
                 <ul class="space-y-3.5 text-[14px] text-ink/80">
                   <li class="flex items-start gap-3">
@@ -1445,12 +1455,12 @@
                       class="w-[18px] h-[18px] text-clay mt-0.5 shrink-0"></i
                     >Live whiteboard plus session recording
                   </li>
-                  <li class="flex items-start gap-3">
+                  <!-- <li class="flex items-start gap-3">
                     <i
                       data-lucide="check-circle-2"
                       class="w-[18px] h-[18px] text-clay mt-0.5 shrink-0"></i
                     >Weekly worksheets and past questions
-                  </li>
+                  </li> -->
                   <li class="flex items-start gap-3">
                     <i
                       data-lucide="check-circle-2"
@@ -1709,7 +1719,7 @@
               <p class="eyebrow text-clay mb-4">Secure your spot</p>
               <h2
                 class="font-display text-3xl sm:text-4xl md:text-[46px] font-extrabold tracking-[-0.03em] leading-[1.05] text-white">
-                Solve. Understand. <span class="text-clay">Achieve.</span>
+                Solve. Understand. <span class="text-clay">Excel.</span>
               </h2>
               <p
                 class="mt-6 text-[15px] sm:text-base text-white/62 leading-relaxed max-w-lg">
@@ -1751,7 +1761,7 @@
                   ><i
                     data-lucide="map-pin"
                     class="w-3.5 h-3.5 text-clay"></i
-                  >Online, anywhere in Nigeria</span
+                  >Online, anywhere in the world</span
                 >
               </div>
             </div>
@@ -1819,7 +1829,7 @@
             </div>
             <p class="text-[13.5px] text-white/50 leading-relaxed max-w-sm">
               Live online Mathematics and Physics classes for secondary school
-              and university foundation students. Solve. Understand. Achieve.
+              and university foundation students. Solve. Understand. Excel.
             </p>
           </div>
 
@@ -1906,7 +1916,7 @@
                 <i
                   data-lucide="globe"
                   class="w-4 h-4"></i
-                >Online, Nigeria wide
+                >Online, Worldwide
               </li>
             </ul>
           </div>
@@ -1918,10 +1928,135 @@
             &copy; <span id="year">2026</span> Burhan Tutors. All rights
             reserved.
           </p>
-          <p>Solve. Understand. Achieve.</p>
+          <p>Solve. Understand. Excel.</p>
         </div>
       </div>
     </footer>
+
+    <!--COST CALCULATOR-->
+    <div
+      id="calc-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="calc-title">
+      <div class="calc-panel">
+        <div class="flex items-start justify-between gap-4 mb-7">
+          <div>
+            <p class="eyebrow text-clay mb-2">Cost calculator</p>
+            <h3
+              id="calc-title"
+              class="font-display text-[21px] font-extrabold tracking-[-0.02em]">
+              Work out your fee
+            </h3>
+          </div>
+          <button
+            id="calc-close"
+            type="button"
+            class="calc-close shrink-0"
+            aria-label="Close calculator">
+            <i
+              data-lucide="x"
+              class="w-[18px] h-[18px]"></i>
+          </button>
+        </div>
+
+        <div class="calc-field mb-6">
+          <label for="calc-hours">Hours per week</label>
+          <div class="calc-step">
+            <button
+              type="button"
+              data-calc-step="-1"
+              aria-label="One hour less">
+              <i
+                data-lucide="minus"
+                class="w-4 h-4"></i>
+            </button>
+            <input
+              id="calc-hours"
+              type="number"
+              inputmode="numeric"
+              min="1"
+              max="40"
+              step="1"
+              value="2" />
+            <button
+              type="button"
+              data-calc-step="1"
+              aria-label="One hour more">
+              <i
+                data-lucide="plus"
+                class="w-4 h-4"></i>
+            </button>
+          </div>
+          <p class="mt-2.5 text-[12px] text-ink/45">
+            Most students take 2 to 4 hours a week.
+          </p>
+        </div>
+
+        <div class="calc-field mb-7">
+          <label id="calc-period-label">Paying</label>
+          <div
+            class="calc-toggle"
+            role="group"
+            aria-labelledby="calc-period-label">
+            <button
+              type="button"
+              data-calc-period="weekly"
+              aria-pressed="true">
+              Weekly
+            </button>
+            <button
+              type="button"
+              data-calc-period="monthly"
+              aria-pressed="false">
+              Monthly
+            </button>
+          </div>
+        </div>
+
+        <div class="calc-total">
+          <p
+            id="calc-caption"
+            class="eyebrow text-white/40 mb-3">
+            2 hours each week
+          </p>
+          <p class="calc-total-num text-[40px] sm:text-[46px] text-white">
+            <span id="calc-amount">&#8358;4,000</span>
+          </p>
+          <p
+            id="calc-unit"
+            class="mt-2.5 font-mono text-[11.5px] text-white/45">
+            per week &middot; 2 hrs at &#8358;2,000
+          </p>
+        </div>
+
+        <p class="mt-5 text-[12.5px] text-ink/50 leading-relaxed">
+          Monthly figures count four weeks of classes. Nothing is charged here,
+          this only shows you the fee before you message us.
+        </p>
+
+        <div class="mt-6 flex flex-col sm:flex-row gap-2.5">
+          <a
+            id="calc-wa"
+            href="https://wa.me/2349039147388"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-clay flex-1 py-3.5 text-[14px]">
+            <i
+              data-lucide="message-circle"
+              class="w-4 h-4"></i>
+            Send this to us
+          </a>
+          <button
+            type="button"
+            data-calc-dismiss
+            class="btn px-6 py-3.5 text-[14px] border border-ink/15 text-ink/70 hover:border-ink/40 hover:text-ink transition-colors">
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
 
     <a
       id="wa-float"
@@ -2299,6 +2434,125 @@
             }
           });
         }
+
+        /* ---------- Cost calculator ---------- */
+        var calcOverlay = document.getElementById("calc-overlay");
+        var calcBtn = document.getElementById("calc-btn");
+        var calcClose = document.getElementById("calc-close");
+        var calcHours = document.getElementById("calc-hours");
+        var calcCaption = document.getElementById("calc-caption");
+        var calcAmount = document.getElementById("calc-amount");
+        var calcUnit = document.getElementById("calc-unit");
+        var calcWa = document.getElementById("calc-wa");
+        var calcPeriod = "weekly";
+        var rate = 2000;
+
+        function updateCalc() {
+          var h = parseInt(calcHours.value, 10);
+          if (isNaN(h) || h < 1) {
+            h = 1;
+            calcHours.value = h;
+          }
+          if (h > 40) {
+            h = 40;
+            calcHours.value = h;
+          }
+
+          var base = h * rate;
+          var total = calcPeriod === "monthly" ? base * 4 : base;
+
+          calcCaption.textContent =
+            h + (h === 1 ? " hour" : " hours") + " each week";
+          calcAmount.innerHTML = "&#8358;" + total.toLocaleString("en-US");
+          calcUnit.innerHTML =
+            "per " +
+            (calcPeriod === "weekly" ? "week" : "month") +
+            " &middot; " +
+            h +
+            (h === 1 ? " hr" : " hrs") +
+            " at &#8358;2,000";
+
+          var msg =
+            "Hello Burhan Tutors, I want to register for " +
+            h +
+            (h === 1 ? " hour" : " hours") +
+            " per week (" +
+            calcPeriod +
+            " payment: ₦" +
+            total.toLocaleString("en-US") +
+            ").";
+          calcWa.href =
+            "https://wa.me/2349039147388?text=" + encodeURIComponent(msg);
+
+          drawIcons();
+        }
+
+        function openCalc() {
+          calcOverlay.classList.add("is-open");
+          calcOverlay.setAttribute("aria-hidden", "false");
+          if (calcHours) calcHours.focus();
+          drawIcons();
+        }
+
+        function closeCalc() {
+          calcOverlay.classList.remove("is-open");
+          calcOverlay.setAttribute("aria-hidden", "true");
+        }
+
+        if (calcBtn) {
+          calcBtn.addEventListener("click", openCalc);
+        }
+
+        if (calcClose) {
+          calcClose.addEventListener("click", closeCalc);
+        }
+
+        var dismissBtns = document.querySelectorAll("[data-calc-dismiss]");
+        Array.prototype.forEach.call(dismissBtns, function (btn) {
+          btn.addEventListener("click", closeCalc);
+        });
+
+        if (calcOverlay) {
+          calcOverlay.addEventListener("click", function (e) {
+            if (e.target === calcOverlay) closeCalc();
+          });
+          document.addEventListener("keydown", function (e) {
+            if (
+              e.key === "Escape" &&
+              calcOverlay.classList.contains("is-open")
+            ) {
+              closeCalc();
+            }
+          });
+        }
+
+        if (calcHours) {
+          calcHours.addEventListener("input", updateCalc);
+          calcHours.addEventListener("change", updateCalc);
+        }
+
+        var stepBtns = document.querySelectorAll("[data-calc-step]");
+        Array.prototype.forEach.call(stepBtns, function (btn) {
+          btn.addEventListener("click", function () {
+            var dir = parseInt(btn.getAttribute("data-calc-step"), 10);
+            var cur = parseInt(calcHours.value, 10) || 2;
+            calcHours.value = Math.max(1, Math.min(40, cur + dir));
+            updateCalc();
+          });
+        });
+
+        var periodBtns = document.querySelectorAll("[data-calc-period]");
+        Array.prototype.forEach.call(periodBtns, function (btn) {
+          btn.addEventListener("click", function () {
+            calcPeriod = btn.getAttribute("data-calc-period");
+            Array.prototype.forEach.call(periodBtns, function (b) {
+              b.setAttribute("aria-pressed", b === btn ? "true" : "false");
+            });
+            updateCalc();
+          });
+        });
+
+        updateCalc();
       })();
     </script>
   </body>

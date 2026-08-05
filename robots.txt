@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://burhan-tutorials.netlify.app/sitemap.xml
+Sitemap: https://burhantutors.netlify.app/sitemap.xml
