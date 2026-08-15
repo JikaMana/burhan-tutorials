@@ -64,342 +64,6 @@
       };
     </script>
     <script src="https://unpkg.com/lucide@1.28.0/dist/umd/lucide.min.js"></script>
-    <style>
-      .hero-carousel {
-        position: relative;
-        overflow: hidden;
-        border-radius: 16px;
-        border: 1px solid var(--line-dark);
-        background: var(--ink-2);
-      }
-      .hero-carousel-track {
-        display: flex;
-        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-      .hero-carousel-slide {
-        min-width: 100%;
-        flex-shrink: 0;
-        position: relative;
-      }
-      .hero-carousel-slide img {
-        width: 100%;
-        height: 280px;
-        object-fit: cover;
-        display: block;
-      }
-      .hero-carousel-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          to top,
-          rgba(8, 20, 35, 0.92) 0%,
-          rgba(8, 20, 35, 0.3) 50%,
-          rgba(8, 20, 35, 0.1) 100%
-        );
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 24px;
-      }
-      .hero-carousel-subject {
-        font-family: "Sora", sans-serif;
-        font-weight: 800;
-        font-size: 22px;
-        color: #fff;
-        letter-spacing: -0.02em;
-      }
-      .hero-carousel-tag {
-        font-family: "JetBrains Mono", monospace;
-        font-size: 10px;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--clay);
-        margin-top: 4px;
-      }
-      .hero-carousel-dots {
-        display: flex;
-        gap: 8px;
-        justify-content: center;
-        padding: 14px;
-        background: var(--ink-2);
-        border-top: 1px solid var(--line-dark);
-      }
-      .hero-carousel-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 999px;
-        background: rgba(247, 246, 243, 0.2);
-        cursor: pointer;
-        transition: all 0.3s ease;
-        border: none;
-      }
-      .hero-carousel-dot.active {
-        background: var(--clay);
-        width: 24px;
-      }
-      .hero-carousel-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        background: rgba(8, 20, 35, 0.7);
-        border: 1px solid var(--line-dark);
-        color: var(--cream);
-        display: grid;
-        place-items: center;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        z-index: 10;
-      }
-      .hero-carousel-nav:hover {
-        background: var(--clay);
-        border-color: var(--clay);
-      }
-      .hero-carousel-nav.prev {
-        left: 10px;
-      }
-      .hero-carousel-nav.next {
-        right: 10px;
-      }
-      .subject-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-      }
-      @media (min-width: 640px) {
-        .subject-grid {
-          grid-template-columns: repeat(4, 1fr);
-        }
-      }
-      .subject-chip {
-        background: var(--ink);
-        border: 1px solid var(--line-dark);
-        border-radius: 10px;
-        padding: 14px 12px;
-        text-align: center;
-        transition: all 0.28s ease;
-        cursor: default;
-      }
-      .subject-chip:hover {
-        border-color: rgba(193, 95, 60, 0.6);
-        background: var(--ink-3);
-        transform: translateY(-2px);
-      }
-      .subject-chip-icon {
-        width: 32px;
-        height: 32px;
-        margin: 0 auto 8px;
-        display: grid;
-        place-items: center;
-        border-radius: 8px;
-        background: rgba(193, 95, 60, 0.12);
-      }
-      .subject-chip-name {
-        font-family: "Sora", sans-serif;
-        font-weight: 600;
-        font-size: 12px;
-        color: var(--cream);
-        line-height: 1.3;
-      }
-      .subject-chip-price {
-        font-family: "JetBrains Mono", monospace;
-        font-size: 10px;
-        color: var(--clay);
-        margin-top: 4px;
-        letter-spacing: 0.05em;
-      }
-      .tutor-form-field {
-        margin-bottom: 20px;
-      }
-      .tutor-form-field label {
-        display: block;
-        font-family: "JetBrains Mono", monospace;
-        font-size: 10.5px;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: rgba(8, 20, 35, 0.5);
-        margin-bottom: 8px;
-      }
-      .tutor-form-field input[type="text"],
-      .tutor-form-field input[type="email"],
-      .tutor-form-field input[type="tel"],
-      .tutor-form-field textarea,
-      .tutor-form-field select {
-        width: 100%;
-        height: 48px;
-        padding: 0 14px;
-        border-radius: 10px;
-        background: #fff;
-        border: 1px solid var(--line-light);
-        font-family: "Inter", sans-serif;
-        font-size: 14px;
-        color: var(--ink);
-        transition: border-color 0.2s ease;
-      }
-      .tutor-form-field input:focus,
-      .tutor-form-field textarea:focus,
-      .tutor-form-field select:focus {
-        outline: none;
-        border-color: var(--clay);
-      }
-      .tutor-form-field textarea {
-        height: auto;
-        min-height: 100px;
-        padding: 12px 14px;
-        resize: vertical;
-      }
-      .tutor-form-field select {
-        appearance: none;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23081423' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-position: right 12px center;
-        padding-right: 36px;
-      }
-      .tutor-checkbox-group {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-      .tutor-checkbox-item {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: 8px 12px;
-        border-radius: 8px;
-        border: 1px solid var(--line-light);
-        background: #fff;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        font-size: 13px;
-        color: var(--ink);
-      }
-      .tutor-checkbox-item:hover {
-        border-color: rgba(193, 95, 60, 0.5);
-      }
-      .tutor-checkbox-item input[type="checkbox"] {
-        width: 16px;
-        height: 16px;
-        accent-color: var(--clay);
-        cursor: pointer;
-      }
-      .tutor-radio-group {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-      .tutor-radio-item {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: 8px 12px;
-        border-radius: 8px;
-        border: 1px solid var(--line-light);
-        background: #fff;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        font-size: 13px;
-        color: var(--ink);
-      }
-      .tutor-radio-item:hover {
-        border-color: rgba(193, 95, 60, 0.5);
-      }
-      .tutor-radio-item input[type="radio"] {
-        width: 16px;
-        height: 16px;
-        accent-color: var(--clay);
-        cursor: pointer;
-      }
-      .tutor-form-section {
-        border-bottom: 1px solid var(--line-light);
-        padding-bottom: 24px;
-        margin-bottom: 24px;
-      }
-      .tutor-form-section:last-of-type {
-        border-bottom: none;
-        padding-bottom: 0;
-        margin-bottom: 0;
-      }
-      .tutor-form-section-title {
-        font-family: "Sora", sans-serif;
-        font-weight: 700;
-        font-size: 16px;
-        color: var(--ink);
-        margin-bottom: 4px;
-      }
-      .tutor-form-section-desc {
-        font-size: 13px;
-        color: var(--ink);
-        opacity: 0.55;
-        margin-bottom: 16px;
-        line-height: 1.5;
-      }
-      .tutor-info-box {
-        background: var(--sand);
-        border: 1px solid var(--line-light);
-        border-radius: 10px;
-        padding: 14px 16px;
-        font-size: 13px;
-        color: var(--ink);
-        opacity: 0.7;
-        line-height: 1.6;
-        margin-bottom: 20px;
-      }
-      .tutor-info-box strong {
-        color: var(--clay);
-      }
-      .pricing-table {
-        width: 100%;
-        border-collapse: separate;
-        border-spacing: 0;
-      }
-      .pricing-table th,
-      .pricing-table td {
-        padding: 14px 16px;
-        text-align: left;
-        font-size: 14px;
-        border-bottom: 1px solid var(--line-light);
-      }
-      .pricing-table th {
-        font-family: "JetBrains Mono", monospace;
-        font-size: 10.5px;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: rgba(8, 20, 35, 0.5);
-        font-weight: 500;
-        background: var(--sand);
-      }
-      .pricing-table th:first-child {
-        border-radius: 10px 0 0 0;
-      }
-      .pricing-table th:last-child {
-        border-radius: 0 10px 0 0;
-      }
-      .pricing-table td {
-        color: var(--ink);
-        background: #fff;
-      }
-      .pricing-table tr:last-child td:first-child {
-        border-radius: 0 0 0 10px;
-      }
-      .pricing-table tr:last-child td:last-child {
-        border-radius: 0 0 10px 0;
-      }
-      .pricing-table tr:hover td {
-        background: var(--sand);
-      }
-      .price-tag {
-        font-family: "Sora", sans-serif;
-        font-weight: 700;
-        color: var(--clay);
-      }
-      .price-tag-premium {
-        font-family: "Sora", sans-serif;
-        font-weight: 700;
-        color: var(--ink);
-      }
-    </style>
   </head>
   <body>
     <a
@@ -485,7 +149,7 @@
           </nav>
           <div class="flex items-center gap-2">
             <a
-              href="https://wa.me/2349039147388?text=Assalamu%20Alaikum%2C%20I%27d%20like%20to%20enrol%20for%20Burhan%20Tutors%20classes."
+              href="https://wa.me/2348165689362?text=Assalamu%20Alaikum%2C%20I%27d%20like%20to%20enrol%20for%20Burhan%20Tutors%20classes."
               target="_blank"
               rel="noopener"
               class="btn btn-clay hidden sm:inline-flex px-5 py-2.5 text-[13px]">
@@ -554,7 +218,7 @@
             >Become a Tutor</a
           >
           <a
-            href="https://wa.me/2349039147388?text=Assalamu%20Alaikum%2C%20I%27d%20like%20to%20enrol%20for%20Burhan%20Tutors%20classes."
+            href="https://wa.me/2348165689362?text=Assalamu%20Alaikum%2C%20I%27d%20like%20to%20enrol%20for%20Burhan%20Tutors%20classes."
             target="_blank"
             rel="noopener"
             class="btn btn-clay mt-3 py-3.5 text-sm"
@@ -611,7 +275,7 @@
               </p>
               <div class="reveal mt-9 flex flex-col sm:flex-row gap-3">
                 <a
-                  href="https://wa.me/2349039147388?text=Assalamu%20Alaikum%2C%20I%27d%20like%20to%20enrol%20for%20Burhan%20Tutors%20classes."
+                  href="https://wa.me/2348165689362?text=Assalamu%20Alaikum%2C%20I%27d%20like%20to%20enrol%20for%20Burhan%20Tutors%20classes."
                   target="_blank"
                   rel="noopener"
                   class="btn btn-clay px-7 py-4 text-[15px]"
@@ -2108,7 +1772,7 @@
 
           <div class="reveal mt-8 text-center">
             <a
-              href="https://wa.me/2349039147388?text=Assalamu%20Alaikum%2C%20I%27d%20like%20to%20enrol%20for%20Burhan%20Tutors%20classes."
+              href="https://wa.me/2348165689362?text=Assalamu%20Alaikum%2C%20I%27d%20like%20to%20enrol%20for%20Burhan%20Tutors%20classes."
               target="_blank"
               rel="noopener"
               class="btn btn-ink px-8 py-4 text-[15px]">
@@ -2250,7 +1914,7 @@
                 <div>
                   <p class="pb-6 text-[14.5px] text-ink/65 leading-relaxed">
                     Classes are running now. New students can join at any time.
-                    Message 0903 914 7388 on WhatsApp and we will confirm your
+                    Message 0816 568 9362 on WhatsApp and we will confirm your
                     day and time.
                   </p>
                 </div>
@@ -2260,7 +1924,7 @@
           <p class="reveal mt-10 text-center text-[14px] text-ink/55">
             Still unsure?
             <a
-              href="https://wa.me/2349039147388?text=Assalamu%20Alaikum%2C%20I%20have%20a%20question%20about%20Burhan%20Tutors."
+              href="https://wa.me/2348165689362?text=Assalamu%20Alaikum%2C%20I%20have%20a%20question%20about%20Burhan%20Tutors."
               target="_blank"
               rel="noopener"
               class="text-clay font-semibold underline underline-offset-4 hover:text-ink transition-colors"
@@ -2320,7 +1984,7 @@
                       type="tel"
                       id="tutor-phone"
                       name="entry.XXXXXX"
-                      placeholder="e.g. 0903 914 7388"
+                      placeholder="e.g. 0816 568 9362"
                       required />
                   </div>
                   <div class="tutor-form-field">
@@ -2676,12 +2340,12 @@
                   >Join our community</a
                 >
                 <a
-                  href="tel:+2349039147388"
+                  href="tel:+2348165689362"
                   class="btn btn-ghost-dark px-7 py-4 text-[15px]"
                   ><i
                     data-lucide="phone"
                     class="w-[18px] h-[18px]"></i
-                  >0903 914 7388</a
+                  >0816 568 9362</a
                 >
               </div>
               <div
@@ -2885,7 +2549,7 @@
             <ul class="space-y-3 text-[13.5px] text-white/60">
               <li>
                 <a
-                  href="https://wa.me/2349039147388?text=Assalamu%20Alaikum%2C%20I%27d%20like%20to%20enrol%20for%20Burhan%20Tutors%20classes."
+                  href="https://wa.me/2348165689362?text=Assalamu%20Alaikum%2C%20I%27d%20like%20to%20enrol%20for%20Burhan%20Tutors%20classes."
                   target="_blank"
                   rel="noopener"
                   class="flex items-center gap-2.5 hover:text-clay transition-colors"
@@ -2897,12 +2561,12 @@
               </li>
               <li>
                 <a
-                  href="tel:+2349039147388"
+                  href="tel:+2348165689362"
                   class="flex items-center gap-2.5 hover:text-clay transition-colors"
                   ><i
                     data-lucide="phone"
                     class="w-4 h-4"></i
-                  >0903 914 7388</a
+                  >0816 568 9362</a
                 >
               </li>
               <li class="flex items-center gap-2.5">
@@ -2933,7 +2597,7 @@
 
     <a
       id="wa-float"
-      href="https://wa.me/2349039147388?text=Assalamu%20Alaikum%2C%20I%27d%20like%20to%20enrol%20for%20Burhan%20Tutors%20classes."
+      href="https://wa.me/2348165689362?text=Assalamu%20Alaikum%2C%20I%27d%20like%20to%20enrol%20for%20Burhan%20Tutors%20classes."
       target="_blank"
       rel="noopener"
       class="btn btn-clay px-5 py-3.5 text-[14px]"
@@ -2945,332 +2609,6 @@
     >
 
     <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs@04f46c6/qrcode.min.js"></script>
-    <script>
-      (function () {
-        "use strict";
-        var reduced = window.matchMedia(
-          "(prefers-reduced-motion: reduce)",
-        ).matches;
-
-        function drawIcons() {
-          if (
-            window.lucide &&
-            typeof window.lucide.createIcons === "function"
-          ) {
-            window.lucide.createIcons();
-          }
-        }
-        drawIcons();
-
-        document.getElementById("year").textContent = new Date().getFullYear();
-
-        /* ---------- Nav state + progress bar ---------- */
-        var nav = document.getElementById("nav");
-        var bar = document.getElementById("progressbar");
-        var waFloat = document.getElementById("wa-float");
-        var sections = Array.prototype.slice.call(
-          document.querySelectorAll("section[id]"),
-        );
-        var navLinks = Array.prototype.slice.call(
-          document.querySelectorAll(".nav-link"),
-        );
-        var methodGrid = document.getElementById("method-grid");
-        var railFill = methodGrid
-          ? methodGrid.querySelector(".rail-fill")
-          : null;
-        var ticking = false;
-
-        function update() {
-          var y = window.scrollY || document.documentElement.scrollTop;
-          nav.classList.toggle("is-stuck", y > 12);
-          waFloat.classList.toggle("on", y > 620);
-          var h = document.documentElement.scrollHeight - window.innerHeight;
-          bar.style.transform =
-            "scaleX(" + (h > 0 ? Math.min(y / h, 1) : 0) + ")";
-          var current = "";
-          for (var i = 0; i < sections.length; i++) {
-            if (sections[i].offsetTop - 140 <= y) current = sections[i].id;
-          }
-          for (var j = 0; j < navLinks.length; j++) {
-            navLinks[j].classList.toggle(
-              "is-active",
-              navLinks[j].getAttribute("href") === "#" + current,
-            );
-          }
-          if (railFill && methodGrid) {
-            var r = methodGrid.getBoundingClientRect();
-            var vh = window.innerHeight;
-            var p = (vh * 0.82 - r.top) / (r.height + vh * 0.2);
-            p = Math.max(0, Math.min(1, p));
-            railFill.style.transform =
-              window.innerWidth >= 768
-                ? "scaleX(" + p + ")"
-                : "scaleY(" + p + ")";
-          }
-          ticking = false;
-        }
-
-        function onScroll() {
-          if (!ticking) {
-            ticking = true;
-            window.requestAnimationFrame(update);
-          }
-        }
-        window.addEventListener("scroll", onScroll, { passive: true });
-        window.addEventListener("resize", onScroll, { passive: true });
-        update();
-
-        /* ---------- Mobile menu ---------- */
-        var menuBtn = document.getElementById("menu-btn");
-        var menu = document.getElementById("mobile-menu");
-        var menuIconWrap = document.getElementById("menu-icon-wrap");
-        var menuOpen = false;
-
-        function setMenu(open) {
-          menuOpen = open;
-          menu.style.maxHeight = open ? menu.scrollHeight + "px" : "0px";
-          menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
-          menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-          menuIconWrap.innerHTML =
-            '<i data-lucide="' +
-            (open ? "x" : "menu") +
-            '" class="w-5 h-5"></i>';
-          drawIcons();
-        }
-        menuBtn.addEventListener("click", function () {
-          setMenu(!menuOpen);
-        });
-        Array.prototype.forEach.call(
-          document.querySelectorAll(".mob-link"),
-          function (l) {
-            l.addEventListener("click", function () {
-              if (menuOpen) setMenu(false);
-            });
-          },
-        );
-        window.addEventListener("resize", function () {
-          if (window.innerWidth >= 1024 && menuOpen) setMenu(false);
-        });
-
-        /* ---------- Reveal on scroll ---------- */
-        var revealEls = Array.prototype.slice.call(
-          document.querySelectorAll(".reveal"),
-        );
-        if (reduced || !("IntersectionObserver" in window)) {
-          revealEls.forEach(function (el) {
-            el.classList.add("revealed");
-          });
-        } else {
-          var io = new IntersectionObserver(
-            function (entries) {
-              entries.forEach(function (entry) {
-                if (!entry.isIntersecting) return;
-                var el = entry.target;
-                var sibs = Array.prototype.slice
-                  .call(el.parentElement ? el.parentElement.children : [])
-                  .filter(function (n) {
-                    return n.classList && n.classList.contains("reveal");
-                  });
-                var idx = Math.max(0, sibs.indexOf(el));
-                el.style.transitionDelay = Math.min(idx * 80, 320) + "ms";
-                el.classList.add("revealed");
-                io.unobserve(el);
-              });
-            },
-            { threshold: 0.1, rootMargin: "0px 0px -6% 0px" },
-          );
-          revealEls.forEach(function (el) {
-            io.observe(el);
-          });
-        }
-
-        /* ---------- Hero headline ---------- */
-        var heroCopy = document.getElementById("hero-copy");
-        if (heroCopy) {
-          window.requestAnimationFrame(function () {
-            window.requestAnimationFrame(function () {
-              heroCopy.classList.add("hero-in");
-            });
-          });
-        }
-
-        /* ---------- Hero Carousel ---------- */
-        var carouselTrack = document.getElementById("carousel-track");
-        var carouselDots = document.getElementById("carousel-dots");
-        var carouselPrev = document.getElementById("carousel-prev");
-        var carouselNext = document.getElementById("carousel-next");
-        var currentSlide = 0;
-        var totalSlides = 8;
-        var carouselInterval;
-
-        function initCarousel() {
-          if (!carouselTrack || !carouselDots) return;
-          for (var i = 0; i < totalSlides; i++) {
-            var dot = document.createElement("button");
-            dot.className = "hero-carousel-dot" + (i === 0 ? " active" : "");
-            dot.setAttribute("aria-label", "Go to slide " + (i + 1));
-            dot.addEventListener(
-              "click",
-              (function (idx) {
-                return function () {
-                  goToSlide(idx);
-                };
-              })(i),
-            );
-            carouselDots.appendChild(dot);
-          }
-          drawIcons();
-          startCarousel();
-        }
-
-        function goToSlide(index) {
-          if (index < 0) index = totalSlides - 1;
-          if (index >= totalSlides) index = 0;
-          currentSlide = index;
-          carouselTrack.style.transform = "translateX(-" + index * 100 + "%)";
-          var dots = carouselDots.querySelectorAll(".hero-carousel-dot");
-          dots.forEach(function (d, i) {
-            d.classList.toggle("active", i === index);
-          });
-        }
-
-        function startCarousel() {
-          carouselInterval = setInterval(function () {
-            goToSlide(currentSlide + 1);
-          }, 4500);
-        }
-
-        function stopCarousel() {
-          clearInterval(carouselInterval);
-        }
-
-        if (carouselPrev)
-          carouselPrev.addEventListener("click", function () {
-            stopCarousel();
-            goToSlide(currentSlide - 1);
-            startCarousel();
-          });
-        if (carouselNext)
-          carouselNext.addEventListener("click", function () {
-            stopCarousel();
-            goToSlide(currentSlide + 1);
-            startCarousel();
-          });
-        if (carouselTrack) {
-          carouselTrack.addEventListener("mouseenter", stopCarousel);
-          carouselTrack.addEventListener("mouseleave", startCarousel);
-        }
-        initCarousel();
-
-        /* ---------- Count up stats ---------- */
-        var counters = Array.prototype.slice.call(
-          document.querySelectorAll(".count"),
-        );
-        function runCount(el) {
-          var to = parseInt(el.getAttribute("data-to"), 10) || 0;
-          var sep = el.hasAttribute("data-sep");
-          if (reduced) {
-            el.textContent = sep ? to.toLocaleString("en-US") : to;
-            return;
-          }
-          var start = null,
-            dur = 1200;
-          function step(ts) {
-            if (start === null) start = ts;
-            var p = Math.min((ts - start) / dur, 1);
-            var v = Math.round(to * (1 - Math.pow(1 - p, 3)));
-            el.textContent = sep ? v.toLocaleString("en-US") : v;
-            if (p < 1) window.requestAnimationFrame(step);
-          }
-          window.requestAnimationFrame(step);
-        }
-        if ("IntersectionObserver" in window) {
-          var cio = new IntersectionObserver(
-            function (entries) {
-              entries.forEach(function (e) {
-                if (e.isIntersecting) {
-                  runCount(e.target);
-                  cio.unobserve(e.target);
-                }
-              });
-            },
-            { threshold: 0.6 },
-          );
-          counters.forEach(function (c) {
-            cio.observe(c);
-          });
-        } else {
-          counters.forEach(runCount);
-        }
-
-        /* ---------- FAQ: one open at a time ---------- */
-        var faqs = Array.prototype.slice.call(
-          document.querySelectorAll("details.faq"),
-        );
-        faqs.forEach(function (d) {
-          d.addEventListener("toggle", function () {
-            if (!d.open) return;
-            faqs.forEach(function (o) {
-              if (o !== d) o.open = false;
-            });
-          });
-        });
-
-        /* ---------- QR code ---------- */
-        var qrBox = document.getElementById("qr");
-        var siteUrl = "https://burhantutors.netlify.app/";
-        if (qrBox) {
-          try {
-            if (!window.QRCode) throw new Error("qr unavailable");
-            qrBox.innerHTML = "";
-            new QRCode(qrBox, {
-              text: siteUrl,
-              width: 144,
-              height: 144,
-              colorDark: "#081423",
-              colorLight: "#ffffff",
-              correctLevel: QRCode.CorrectLevel.M,
-            });
-          } catch (err) {
-            qrBox.innerHTML =
-              '<span class="font-mono text-[10px] text-ink/55 leading-snug px-2">burhantutors<br>.netlify.app</span>';
-          }
-        }
-
-        /* ---------- Copy link ---------- */
-        var copyBtn = document.getElementById("copy-link");
-        var copyLabel = document.getElementById("copy-label");
-        if (copyBtn) {
-          copyBtn.addEventListener("click", function () {
-            function done() {
-              copyLabel.textContent = "Link copied";
-              setTimeout(function () {
-                copyLabel.textContent = "Copy page link";
-              }, 2000);
-            }
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-              navigator.clipboard
-                .writeText(siteUrl)
-                .then(done)
-                .catch(function () {
-                  copyLabel.textContent = siteUrl;
-                });
-            } else {
-              var ta = document.createElement("textarea");
-              ta.value = siteUrl;
-              document.body.appendChild(ta);
-              ta.select();
-              try {
-                document.execCommand("copy");
-                done();
-              } catch (e) {
-                copyLabel.textContent = siteUrl;
-              }
-              document.body.removeChild(ta);
-            }
-          });
-        }
-      })();
-    </script>
+    <script src="/script/main.js"></script>
   </body>
 </html>
