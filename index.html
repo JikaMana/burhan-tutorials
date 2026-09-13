@@ -2748,19 +2748,20 @@
     -->
     <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+
     <script>
       var firebaseConfig = {
-        apiKey: "YOUR_API_KEY",
-        authDomain: "YOUR_PROJECT.firebaseapp.com",
-        projectId: "YOUR_PROJECT_ID",
-        storageBucket: "YOUR_PROJECT.appspot.com",
-        messagingSenderId: "YOUR_SENDER_ID",
-        appId: "YOUR_APP_ID",
+        apiKey: "AIzaSyDaIbNnFoxs43TSmfAleFK3oQPuQKog2DU",
+        authDomain: "burhan-tutors-website.firebaseapp.com",
+        projectId: "burhan-tutors-website",
+        storageBucket: "burhan-tutors-website.firebasestorage.app",
+        messagingSenderId: "359861270073",
+        appId: "1:359861270073:web:516d9da8eb4e8c46613fe8",
+        measurementId: "G-XNEE05CQ4E",
       };
-      try {
-        firebase.initializeApp(firebaseConfig);
-      } catch (e) {
-        console.error("Firebase failed to initialise:", e);
+
+      if (!window.firebase.apps.length) {
+        window.firebase.initializeApp(firebaseConfig);
       }
     </script>
     <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs@04f46c6/qrcode.min.js"></script>
