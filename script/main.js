@@ -334,4 +334,92 @@
       }
     });
   }
+
+  /* ---------- Registration poll (Firebase) ---------- */
+  var pollRoot = document.getElementById("reg-poll");
+  if (pollRoot) {
+    var STORAGE_KEY = "burhan_poll_answered";
+    var pollButtons = Array.prototype.slice.call(
+      pollRoot.querySelectorAll(".poll-option"),
+    );
+    var stateAsk = pollRoot.querySelector('[data-poll-state="ask"]');
+    var stateThanks = pollRoot.querySelector('[data-poll-state="thanks"]');
+    var errorEl = pollRoot.querySelector(".poll-error");
+    var submitting = false;
+
+    function showThanks() {
+      if (stateAsk) stateAsk.classList.remove("is-active");
+      if (stateThanks) stateThanks.classList.add("is-active");
+    }
+
+    // If this device already answered, skip straight to the thank-you state.
+    try {
+      if (window.localStorage && localStorage.getItem(STORAGE_KEY)) {
+        showThanks();
+      }
+    } catch (e) {
+      /* localStorage unavailable — no-op, poll still works */
+    }
+
+    function submitAnswer(button) {
+      if (submitting) return;
+      submitting = true;
+
+      var answer = button.getAttribute("data-answer");
+      pollButtons.forEach(function (b) {
+        b.disabled = true;
+      });
+      button.classList.add("is-picked");
+      if (errorEl) errorEl.classList.remove("is-active");
+
+      function onSuccess() {
+        try {
+          if (window.localStorage) {
+            localStorage.setItem(STORAGE_KEY, answer);
+          }
+        } catch (e) {
+          /* ignore */
+        }
+        showThanks();
+      }
+
+      function onFailure(err) {
+        console.error("Poll submission failed:", err);
+        submitting = false;
+        pollButtons.forEach(function (b) {
+          b.disabled = false;
+        });
+        button.classList.remove("is-picked");
+        if (errorEl) errorEl.classList.add("is-active");
+      }
+
+      // Requires Firebase to be initialised — see the firebaseConfig
+      // block near the top of this file / the <script> in index.html.
+      if (
+        window.firebase &&
+        window.firebase.apps &&
+        window.firebase.apps.length
+      ) {
+        window.firebase
+          .firestore()
+          .collection("poll_responses")
+          .add({
+            question: "what_stops_registration",
+            answer: answer,
+            page: window.location.href,
+            createdAt: window.firebase.firestore.FieldValue.serverTimestamp(),
+          })
+          .then(onSuccess)
+          .catch(onFailure);
+      } else {
+        onFailure(new Error("Firebase is not configured yet."));
+      }
+    }
+
+    pollButtons.forEach(function (b) {
+      b.addEventListener("click", function () {
+        submitAnswer(b);
+      });
+    });
+  }
 })();
