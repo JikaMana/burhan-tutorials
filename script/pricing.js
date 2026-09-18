@@ -92,6 +92,10 @@
     checkbox.addEventListener("change", updateCustomTotal);
   });
 
-  updateSelectedPlan(packageOptions[0]);
+  const defaultPlan =
+    packageOptions.find(function (button) {
+      return button.dataset.plan === "science";
+    }) || packageOptions[0];
+  updateSelectedPlan(defaultPlan);
   updateCustomTotal();
 })();
