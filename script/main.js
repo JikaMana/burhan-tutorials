@@ -27,10 +27,12 @@
 
   function update() {
     var y = window.scrollY || document.documentElement.scrollTop;
-    nav.classList.toggle("is-stuck", y > 12);
-    waFloat.classList.toggle("on", y > 620);
-    var h = document.documentElement.scrollHeight - window.innerHeight;
-    bar.style.transform = "scaleX(" + (h > 0 ? Math.min(y / h, 1) : 0) + ")";
+    if (nav) nav.classList.toggle("is-stuck", y > 12);
+    if (waFloat) waFloat.classList.toggle("on", y > 620);
+    if (bar) {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.transform = "scaleX(" + (h > 0 ? Math.min(y / h, 1) : 0) + ")";
+    }
     var current = "";
     for (var i = 0; i < sections.length; i++) {
       if (sections[i].offsetTop - 140 <= y) current = sections[i].id;

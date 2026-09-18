@@ -1006,6 +1006,290 @@ details.faq .faq-body > div {
   display: inline-block;
 }
 
+/* ---------- Premium pricing package page ---------- */
+.package-hero {
+  background:
+    linear-gradient(135deg, rgba(8, 20, 35, 0.96), rgba(12, 28, 46, 0.9)),
+    url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80")
+      center/cover no-repeat;
+}
+.detail-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(247, 246, 243, 0.9);
+  border-radius: 999px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+}
+.package-summary-panel {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 26px;
+  padding: 1.75rem;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.24);
+}
+.package-summary-top h2 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.05em;
+  margin-top: 0.4rem;
+}
+.package-summary-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  margin-top: 1.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.package-feature-icon {
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 0.85rem;
+  background: rgba(193, 95, 60, 0.14);
+  color: var(--clay);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.package-summary-feature strong {
+  display: block;
+  color: #fff;
+  font-size: 0.98rem;
+  margin-bottom: 0.15rem;
+}
+.package-summary-feature p {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: rgba(247, 246, 243, 0.7);
+}
+.package-summary-total {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  background: rgba(247, 246, 243, 0.06);
+  border: 1px solid rgba(247, 246, 243, 0.09);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.package-summary-total span {
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(247, 246, 243, 0.6);
+}
+.package-summary-total strong {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  color: #fff;
+  letter-spacing: -0.05em;
+  font-family: "Sora", sans-serif;
+}
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.package-option {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  padding: 1.5rem;
+  border-radius: 1.3rem;
+  background: #fff;
+  border: 1px solid rgba(8, 20, 35, 0.08);
+  box-shadow: 0 14px 32px rgba(8, 20, 35, 0.05);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.package-option:hover {
+  transform: translateY(-4px);
+  border-color: rgba(193, 95, 60, 0.4);
+  box-shadow: 0 18px 38px rgba(193, 95, 60, 0.08);
+}
+.package-option.is-selected {
+  border-color: var(--clay);
+  box-shadow: 0 18px 40px rgba(193, 95, 60, 0.13);
+}
+.package-option.is-selected::before {
+  content: "Selected";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--clay);
+  color: #fff;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.38rem 0.6rem;
+  border-radius: 999px;
+}
+.package-badge {
+  display: inline-flex;
+  padding: 0.38rem 0.72rem;
+  background: rgba(193, 95, 60, 0.08);
+  border-radius: 999px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.66rem;
+  color: var(--clay);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.package-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+.package-header h3 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  color: var(--ink);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-top: 0.3rem;
+}
+.price-pill {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.75rem;
+  font-family: "JetBrains Mono", monospace;
+}
+.package-meta {
+  margin-top: 1rem;
+  color: var(--clay);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.package-option ul {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.7rem;
+  color: rgba(8, 20, 35, 0.75);
+  font-size: 0.92rem;
+}
+.package-option ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.package-option ul li i {
+  color: var(--clay);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.custom-plan-panel,
+.custom-summary-panel {
+  background: #fff;
+  border: 1px solid rgba(8, 20, 35, 0.08);
+  border-radius: 1.3rem;
+  box-shadow: 0 18px 36px rgba(8, 20, 35, 0.05);
+}
+.custom-plan-panel {
+  padding: 1.75rem;
+}
+.custom-course-list {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+}
+.custom-course-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid rgba(8, 20, 35, 0.08);
+  border-radius: 0.9rem;
+  padding: 0.8rem 0.9rem;
+  background: rgba(247, 246, 243, 0.8);
+  color: var(--ink);
+  font-size: 0.96rem;
+}
+.custom-course-item input {
+  accent-color: var(--clay);
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+.custom-course-item span {
+  flex: 1;
+  min-width: 0;
+}
+.custom-course-item strong {
+  color: var(--clay);
+  font-size: 0.78rem;
+  font-family: "JetBrains Mono", monospace;
+}
+.custom-summary-panel {
+  padding: 1.75rem;
+}
+.custom-total-box {
+  margin-top: 1rem;
+  padding: 1.1rem 1.2rem;
+  border-radius: 1rem;
+  background: var(--ink);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.custom-total-box span {
+  color: rgba(247, 246, 243, 0.68);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.custom-total-box strong {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: -0.04em;
+}
+.summary-points {
+  margin-top: 1.2rem;
+  display: grid;
+  gap: 0.85rem;
+  color: rgba(8, 20, 35, 0.75);
+  font-size: 0.94rem;
+}
+.summary-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+.summary-points li i {
+  color: var(--clay);
+  flex-shrink: 0;
+  margin-top: 0.12rem;
+}
+@media (max-width: 768px) {
+  .package-grid {
+    grid-template-columns: 1fr;
+  }
+  .custom-course-item {
+    padding-right: 0.7rem;
+  }
+}
+
 /* ---------- Poll ---------- */
 .poll-option {
   width: 100%;

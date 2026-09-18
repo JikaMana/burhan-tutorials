@@ -1,0 +1,97 @@
+(function () {
+  "use strict";
+
+  const selectedPlanName = document.getElementById("selected-plan-name");
+  const selectedPlanTotal = document.getElementById("selected-plan-total");
+  const planWaButton = document.getElementById("plan-wa-button");
+  const customTotal = document.getElementById("custom-total");
+  const customWaButton = document.getElementById("custom-wa-button");
+  const packageOptions = Array.prototype.slice.call(
+    document.querySelectorAll(".package-option"),
+  );
+  const customCourses = Array.prototype.slice.call(
+    document.querySelectorAll(".custom-course"),
+  );
+
+  const PLAN_MESSAGES = {
+    bece: "Hello%20Burhan%20Tutors%2C%20I%20want%20to%20start%20with%20the%20BECE%20Booster%20package%20for%20%E2%82%A620%2C000%20monthly.",
+    science:
+      "Hello%20Burhan%20Tutors%2C%20I%20want%20to%20start%20with%20the%20Science%20Premium%20package%20for%20%E2%82%A628%2C000%20monthly.",
+    custom:
+      "Hello%20Burhan%20Tutors%2C%20I%20want%20to%20build%20a%20custom%20learning%20plan%20for%20my%20child.",
+  };
+
+  function formatMoney(value) {
+    return new Intl.NumberFormat("en-NG", {
+      style: "currency",
+      currency: "NGN",
+      maximumFractionDigits: 0,
+    }).format(value);
+  }
+
+  function updateSelectedPlan(button) {
+    if (!button) return;
+
+    const name = button.dataset.name || "Plan";
+    const price = Number(button.dataset.price || 0);
+
+    packageOptions.forEach(function (item) {
+      item.classList.toggle("is-selected", item === button);
+    });
+
+    if (selectedPlanName) selectedPlanName.textContent = name;
+    if (selectedPlanTotal) selectedPlanTotal.textContent = formatMoney(price);
+
+    if (planWaButton) {
+      const message =
+        PLAN_MESSAGES[button.dataset.plan] || PLAN_MESSAGES.custom;
+      planWaButton.href = "https://wa.me/2348165689362?text=" + message;
+    }
+  }
+
+  function updateCustomTotal() {
+    let total = 0;
+    const labels = [];
+
+    customCourses.forEach(function (checkbox) {
+      if (checkbox.checked) {
+        total += Number(checkbox.value || 0);
+        labels.push(checkbox.dataset.label);
+      }
+    });
+
+    if (customTotal) customTotal.textContent = formatMoney(total);
+
+    if (customWaButton) {
+      if (!labels.length) {
+        customWaButton.href =
+          "https://wa.me/2348165689362?text=Hello%20Burhan%20Tutors%2C%20I%20want%20to%20build%20a%20custom%20learning%20plan%20for%20my%20child.";
+        return;
+      }
+
+      const selectionText = labels.join(", ");
+      customWaButton.href =
+        "https://wa.me/2348165689362?text=" +
+        encodeURIComponent(
+          "Hello Burhan Tutors, I want a custom study plan for " +
+            selectionText +
+            " and the estimated total is " +
+            formatMoney(total) +
+            ".",
+        );
+    }
+  }
+
+  packageOptions.forEach(function (button) {
+    button.addEventListener("click", function () {
+      updateSelectedPlan(button);
+    });
+  });
+
+  customCourses.forEach(function (checkbox) {
+    checkbox.addEventListener("change", updateCustomTotal);
+  });
+
+  updateSelectedPlan(packageOptions[0]);
+  updateCustomTotal();
+})();
