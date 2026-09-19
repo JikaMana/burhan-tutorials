@@ -3,6 +3,12 @@
 
   const selectedPlanName = document.getElementById("selected-plan-name");
   const selectedPlanTotal = document.getElementById("selected-plan-total");
+  const selectedPackageLabel = document.getElementById(
+    "selected-package-label",
+  );
+  const selectedPackageWaButton = document.getElementById(
+    "selected-package-wa-button",
+  );
   const planWaButton = document.getElementById("plan-wa-button");
   const customTotal = document.getElementById("custom-total");
   const customWaButton = document.getElementById("custom-wa-button");
@@ -41,12 +47,44 @@
 
     if (selectedPlanName) selectedPlanName.textContent = name;
     if (selectedPlanTotal) selectedPlanTotal.textContent = formatMoney(price);
+    if (selectedPackageLabel) selectedPackageLabel.textContent = name;
+
+    const message = PLAN_MESSAGES[button.dataset.plan] || PLAN_MESSAGES.custom;
+    const whatsappUrl = "https://wa.me/2348165689362?text=" + message;
 
     if (planWaButton) {
-      const message =
-        PLAN_MESSAGES[button.dataset.plan] || PLAN_MESSAGES.custom;
-      planWaButton.href = "https://wa.me/2348165689362?text=" + message;
+      planWaButton.href = whatsappUrl;
     }
+    if (selectedPackageWaButton) {
+      selectedPackageWaButton.href = whatsappUrl;
+      selectedPackageWaButton.dataset.plan = button.dataset.plan || "custom";
+      selectedPackageWaButton.dataset.planName = name;
+      selectedPackageWaButton.dataset.planPrice = String(price);
+    }
+  }
+
+  function trackPackageClick(button) {
+    if (
+      !window.firebase ||
+      !window.firebase.apps ||
+      !window.firebase.apps.length
+    ) {
+      return;
+    }
+
+    window.firebase
+      .firestore()
+      .collection("package_whatsapp_clicks")
+      .add({
+        package: button.dataset.plan || "custom",
+        packageName: button.dataset.planName || "Plan",
+        price: Number(button.dataset.planPrice || 0),
+        page: window.location.href,
+        createdAt: window.firebase.firestore.FieldValue.serverTimestamp(),
+      })
+      .catch(function (error) {
+        console.error("Package click tracking failed:", error);
+      });
   }
 
   function updateCustomTotal() {
@@ -87,6 +125,12 @@
       updateSelectedPlan(button);
     });
   });
+
+  if (selectedPackageWaButton) {
+    selectedPackageWaButton.addEventListener("click", function () {
+      trackPackageClick(selectedPackageWaButton);
+    });
+  }
 
   customCourses.forEach(function (checkbox) {
     checkbox.addEventListener("change", updateCustomTotal);

@@ -401,6 +401,24 @@
               </ul>
             </button>
           </div>
+
+          <div class="reveal mt-8 max-w-xl mx-auto text-center">
+            <p class="text-[13px] text-ink/55 mb-4">
+              Selected
+              <strong id="selected-package-label">Science Premium</strong>?
+            </p>
+            <a
+              id="selected-package-wa-button"
+              href="https://wa.me/2348165689362?text=Hello%20Burhan%20Tutors%2C%20I%20want%20to%20start%20with%20the%20Science%20Premium%20package%20for%20%E2%82%A628%2C000%20monthly."
+              target="_blank"
+              rel="noopener"
+              class="btn btn-clay px-7 py-4 text-[15px]">
+              <i
+                data-lucide="message-circle"
+                class="w-[18px] h-[18px]"></i>
+              Message us about this package
+            </a>
+          </div>
         </div>
       </section>
 
@@ -683,6 +701,23 @@
       ><span class="hidden sm:inline">Enrol now</span></a
     >
 
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyDaIbNnFoxs43TSmfAleFK3oQPuQKog2DU",
+        authDomain: "burhan-tutors-website.firebaseapp.com",
+        projectId: "burhan-tutors-website",
+        storageBucket: "burhan-tutors-website.firebasestorage.app",
+        messagingSenderId: "359861270073",
+        appId: "1:359861270073:web:516d9da8eb4e8c46613fe8",
+        measurementId: "G-XNEE05CQ4E",
+      };
+
+      if (!window.firebase.apps.length) {
+        window.firebase.initializeApp(firebaseConfig);
+      }
+    </script>
     <script src="/script/pricing.js"></script>
     <script src="/script/main.js"></script>
   </body>
