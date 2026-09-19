@@ -1134,6 +1134,17 @@ details.faq .faq-body > div {
   padding: 0.38rem 0.6rem;
   border-radius: 999px;
 }
+.custom-plan-section.is-active .custom-plan-panel {
+  border-color: var(--clay);
+  box-shadow:
+    0 0 0 4px rgba(193, 95, 60, 0.12),
+    0 24px 48px rgba(193, 95, 60, 0.12);
+}
+.custom-plan-panel {
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
 .package-badge {
   display: inline-flex;
   padding: 0.38rem 0.72rem;

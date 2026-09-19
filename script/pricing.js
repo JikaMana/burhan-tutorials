@@ -9,6 +9,9 @@
   const selectedPackageWaButton = document.getElementById(
     "selected-package-wa-button",
   );
+  const selectedPackageCta = document.getElementById("selected-package-cta");
+  const customPlanSection = document.getElementById("custom-plan-section");
+  const customPlanPanel = document.getElementById("custom-plan-panel");
   const planWaButton = document.getElementById("plan-wa-button");
   const customTotal = document.getElementById("custom-total");
   const customWaButton = document.getElementById("custom-wa-button");
@@ -40,6 +43,7 @@
 
     const name = button.dataset.name || "Plan";
     const price = Number(button.dataset.price || 0);
+    const isCustomPlan = button.dataset.plan === "custom";
 
     packageOptions.forEach(function (item) {
       item.classList.toggle("is-selected", item === button);
@@ -48,6 +52,10 @@
     if (selectedPlanName) selectedPlanName.textContent = name;
     if (selectedPlanTotal) selectedPlanTotal.textContent = formatMoney(price);
     if (selectedPackageLabel) selectedPackageLabel.textContent = name;
+    if (selectedPackageCta) selectedPackageCta.hidden = isCustomPlan;
+    if (customPlanSection) {
+      customPlanSection.classList.toggle("is-active", isCustomPlan);
+    }
 
     const message = PLAN_MESSAGES[button.dataset.plan] || PLAN_MESSAGES.custom;
     const whatsappUrl = "https://wa.me/2348165689362?text=" + message;
@@ -60,6 +68,15 @@
       selectedPackageWaButton.dataset.plan = button.dataset.plan || "custom";
       selectedPackageWaButton.dataset.planName = name;
       selectedPackageWaButton.dataset.planPrice = String(price);
+    }
+
+    if (isCustomPlan && customPlanSection) {
+      const targetTop =
+        customPlanSection.getBoundingClientRect().top + window.scrollY - 88;
+      window.scrollTo({ top: targetTop, behavior: "smooth" });
+      window.setTimeout(function () {
+        if (customPlanPanel) customPlanPanel.focus({ preventScroll: true });
+      }, 450);
     }
   }
 
